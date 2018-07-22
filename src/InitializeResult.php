@@ -7,12 +7,12 @@ class InitializeResult
     /**
      * The capabilities the language server provides.
      *
-     * @var LanguageServer\Protocol\ServerCapabilities
+     * @var ServerCapabilities
      */
     public $capabilities;
 
     /**
-     * @param LanguageServer\Protocol\ServerCapabilities $capabilities
+     * @param ServerCapabilities $capabilities
      */
     public function __construct(ServerCapabilities $capabilities = null)
     {
