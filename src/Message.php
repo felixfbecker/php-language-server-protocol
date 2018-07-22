@@ -18,26 +18,6 @@ class Message
     public $headers;
 
     /**
-     * Parses a message
-     *
-     * @param string $msg
-     * @return Message
-     */
-    public static function parse(string $msg): Message
-    {
-        $obj = new self;
-        $parts = explode("\r\n", $msg);
-        $obj->body = MessageBody::parse(array_pop($parts));
-        foreach ($parts as $line) {
-            if ($line) {
-                $pair = explode(': ', $line);
-                $obj->headers[$pair[0]] = $pair[1];
-            }
-        }
-        return $obj;
-    }
-
-    /**
      * @param \AdvancedJsonRpc\Message $body
      * @param string[] $headers
      */
