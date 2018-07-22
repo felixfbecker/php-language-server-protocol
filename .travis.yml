@@ -1,0 +1,13 @@
+---
+language: php
+
+php:
+  - '7.0'
+  - '7.2'
+
+install:
+  - composer install --prefer-dist --no-interaction
+
+script:
+  - vendor/bin/phpcs -n
+  - vendor/bin/phpstan analyse src --level=7
