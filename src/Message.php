@@ -3,12 +3,10 @@ declare(strict_types = 1);
 
 namespace LanguageServer\Protocol;
 
-use AdvancedJsonRpc\Message as MessageBody;
-
 class Message
 {
     /**
-     * @var \AdvancedJsonRpc\Message
+     * @var string
      */
     public $body;
 
@@ -18,10 +16,10 @@ class Message
     public $headers;
 
     /**
-     * @param \AdvancedJsonRpc\Message $body
+     * @param string $body
      * @param string[] $headers
      */
-    public function __construct(MessageBody $body = null, array $headers = [])
+    public function __construct(string $body = null, array $headers = [])
     {
         $this->body = $body;
         if (!isset($headers['Content-Type'])) {
@@ -32,7 +30,7 @@ class Message
 
     public function __toString(): string
     {
-        $body = (string)$this->body;
+        $body = $this->body;
         $contentLength = strlen($body);
         $this->headers['Content-Length'] = $contentLength;
         $headers = '';
