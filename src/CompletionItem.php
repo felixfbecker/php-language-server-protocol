@@ -112,7 +112,7 @@ class CompletionItem
      * @param mixed|null      $data
      */
     public function __construct(
-        string $label,
+        string $label = null,
         int $kind = null,
         string $detail = null,
         string $documentation = null,
