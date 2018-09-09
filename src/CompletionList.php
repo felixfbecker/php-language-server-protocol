@@ -1,6 +1,6 @@
 <?php
 
-namespace LanguageServer\Protocol;
+namespace LanguageServerProtocol;
 
 /**
  * Represents a collection of completion items to be presented in

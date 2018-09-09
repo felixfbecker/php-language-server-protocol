@@ -1,6 +1,6 @@
 <?php
 
-namespace LanguageServer\Protocol;
+namespace LanguageServerProtocol;
 
 class ReferenceContext
 {

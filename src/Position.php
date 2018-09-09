@@ -1,6 +1,6 @@
 <?php
 
-namespace LanguageServer\Protocol;
+namespace LanguageServerProtocol;
 
 /**
  * Position in a text document expressed as zero-based line and character offset.

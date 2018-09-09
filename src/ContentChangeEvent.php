@@ -1,6 +1,6 @@
 <?php
 
-namespace LanguageServer\Protocol;
+namespace LanguageServerProtocol;
 
 /**
  * An event describing a change to a text document. If range and rangeLength are

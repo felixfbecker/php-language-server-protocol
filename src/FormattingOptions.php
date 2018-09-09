@@ -1,6 +1,6 @@
 <?php
 
-namespace LanguageServer\Protocol;
+namespace LanguageServerProtocol;
 
 /**
  * Value-object describing what options formatting should use.

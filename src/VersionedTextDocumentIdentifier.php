@@ -1,6 +1,6 @@
 <?php
 
-namespace LanguageServer\Protocol;
+namespace LanguageServerProtocol;
 
 class VersionedTextDocumentIdentifier extends TextDocumentIdentifier
 {

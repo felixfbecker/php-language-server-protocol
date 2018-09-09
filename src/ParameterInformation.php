@@ -1,6 +1,6 @@
 <?php
 
-namespace LanguageServer\Protocol;
+namespace LanguageServerProtocol;
 
 /**
  * Represents a parameter of a callable-signature. A parameter can
