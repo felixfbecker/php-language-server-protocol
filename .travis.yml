@@ -10,4 +10,4 @@ install:
 
 script:
   - vendor/bin/phpcs -n
-  - vendor/bin/phpstan analyse src --level=7
+  - composer phpstan

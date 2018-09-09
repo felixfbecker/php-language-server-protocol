@@ -52,7 +52,7 @@ class Diagnostic
      * @param  int    $severity DiagnosticSeverity
      * @param  string $source   A human-readable string describing the source of this diagnostic
      */
-    public function __construct(string $message = null, Range $range = null, int $code = null, int $severity = null, string $source = null)
+    public function __construct(string $message, Range $range, int $code = null, int $severity = null, string $source = null)
     {
         $this->message = $message;
         $this->range = $range;
