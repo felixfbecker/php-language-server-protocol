@@ -2,9 +2,6 @@
 
 namespace LanguageServerProtocol;
 
-use Microsoft\PhpParser;
-use Microsoft\PhpParser\Node;
-
 /**
  * A range in a text document expressed as (zero-based) start and end positions.
  */

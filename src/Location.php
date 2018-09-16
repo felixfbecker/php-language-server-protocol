@@ -2,9 +2,6 @@
 
 namespace LanguageServerProtocol;
 
-use Microsoft\PhpParser;
-use Microsoft\PhpParser\Node;
-
 /**
  * Represents a location inside a resource, such as a line inside a text file.
  */

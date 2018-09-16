@@ -10,7 +10,7 @@ class Hover
     /**
      * The hover's content
      *
-     * @var string|MarkedString|string[]|MarkedString[]
+     * @var string|MarkedString|string[]|MarkedString[]|MarkupContent
      */
     public $contents;
 

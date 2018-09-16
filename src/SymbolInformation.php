@@ -2,9 +2,6 @@
 
 namespace LanguageServerProtocol;
 
-use Microsoft\PhpParser;
-use Microsoft\PhpParser\Node;
-
 /**
  * Represents information about programming constructs like variables, classes,
  * interfaces etc.
