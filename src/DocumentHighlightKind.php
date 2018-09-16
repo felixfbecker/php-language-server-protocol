@@ -8,7 +8,7 @@ namespace LanguageServerProtocol;
 abstract class DocumentHighlightKind
 {
     /**
-     * A textual occurrance.
+     * A textual occurrence.
      */
     const TEXT = 1;
 

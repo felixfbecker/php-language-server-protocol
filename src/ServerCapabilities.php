@@ -7,7 +7,7 @@ class ServerCapabilities
     /**
      * Defines how text documents are synced.
      *
-     * @var int|null
+     * @var TextDocumentSyncOptions|int|null
      */
     public $textDocumentSync;
 

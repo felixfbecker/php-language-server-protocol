@@ -3,8 +3,6 @@ declare(strict_types = 1);
 
 namespace LanguageServerProtocol;
 
-use LanguageServer\Definition;
-
 class CompletionItem
 {
     /**
@@ -40,7 +38,7 @@ class CompletionItem
     public $documentation;
 
     /**
-     * A string that shoud be used when comparing this item
+     * A string that should be used when comparing this item
      * with other items. When `falsy` the label is used.
      *
      * @var string|null
