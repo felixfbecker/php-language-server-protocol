@@ -11,13 +11,13 @@ namespace LanguageServerProtocol;
  */
 abstract class MarkupKind
 {
-	/**
-	 * Plain text is supported as a content format
-	 */
+    /**
+     * Plain text is supported as a content format
+     */
     const PLAINTEXT = 'plaintext';
 
-	/**
-	 * Markdown is supported as a content format
-	 */
+    /**
+     * Markdown is supported as a content format
+     */
     const MARKDOWN = 'markdown';
 }
