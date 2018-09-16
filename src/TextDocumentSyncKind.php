@@ -17,7 +17,7 @@ abstract class TextDocumentSyncKind
      */
     const FULL = 1;
 
-    /*
+    /**
      * Documents are synced by sending the full content on open. After that only
      * incremental updates to the document are sent.
      */
