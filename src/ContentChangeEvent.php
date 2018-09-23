@@ -28,4 +28,11 @@ class ContentChangeEvent
      * @var string
      */
     public $text;
+
+    public function __construct(Range $range = null, int $rangeLength = null, string $text = null)
+    {
+        $this->range = $range;
+        $this->rangeLength = $rangeLength;
+        $this->text = $text;
+    }
 }

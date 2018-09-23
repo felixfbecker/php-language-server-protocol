@@ -29,4 +29,11 @@ class Command
      * @var mixed[]|null
      */
     public $arguments;
+
+    public function __construct(string $title = null, string $command = null, array $arguments = null)
+    {
+        $this->title = $title;
+        $this->command = $command;
+        $this->arguments = $arguments;
+    }
 }

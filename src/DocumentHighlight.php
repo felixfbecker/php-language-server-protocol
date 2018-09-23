@@ -22,4 +22,10 @@ class DocumentHighlight
      * @var int|null
      */
     public $kind;
+
+    public function __construct(Range $range = null, int $kind = null)
+    {
+        $this->range = $range;
+        $this->kind = $kind;
+    }
 }

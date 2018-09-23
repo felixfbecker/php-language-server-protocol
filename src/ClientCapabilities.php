@@ -24,4 +24,11 @@ class ClientCapabilities
      * @var bool|null
      */
     public $xcacheProvider;
+
+    public function __construct(bool $xfilesProvider = null, bool $xcontentProvider = null, bool $xcacheProvider = null)
+    {
+        $this->xfilesProvider = $xfilesProvider;
+        $this->xcontentProvider = $xcontentProvider;
+        $this->xcacheProvider = $xcacheProvider;
+    }
 }

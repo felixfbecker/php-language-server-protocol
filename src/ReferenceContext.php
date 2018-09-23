@@ -10,4 +10,9 @@ class ReferenceContext
      * @var bool
      */
     public $includeDeclaration;
+
+    public function __construct(bool $includeDeclaration = null)
+    {
+        $this->includeDeclaration = $includeDeclaration;
+    }
 }

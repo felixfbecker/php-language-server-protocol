@@ -13,4 +13,12 @@ class WorkspaceEdit
      * @var TextEdit[]
      */
     public $changes;
+
+    /**
+     * @param TextEdit[] $changes
+     */
+    public function __construct(array $changes = [])
+    {
+        $this->changes = $changes;
+    }
 }

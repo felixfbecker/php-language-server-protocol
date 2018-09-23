@@ -14,4 +14,12 @@ class CodeActionContext
      * @var Diagnostic[]
      */
     public $diagnostics;
+
+    /**
+     * @param Diagnostic[] $diagnostics
+     */
+    public function __construct(array $diagnostics = [])
+    {
+        $this->diagnostics = $diagnostics;
+    }
 }

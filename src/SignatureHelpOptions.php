@@ -13,4 +13,9 @@ class SignatureHelpOptions
      * @var string[]|null
      */
     public $triggerCharacters;
+
+    public function __construct(array $triggerCharacters = null)
+    {
+        $this->triggerCharacters = $triggerCharacters;
+    }
 }
