@@ -6,3 +6,14 @@
 [![license](https://img.shields.io/packagist/l/felixfbecker/language-server-protocol.svg)](https://github.com/felixfbecker/php-language-server-protocol/blob/master/LICENSE)
 
 Protocol classes for the [Language Server Protocol](https://microsoft.github.io/language-server-protocol-protocol/) in PHP
+
+## Installation
+
+```
+composer require felixfbecker/language-server-protocol 
+```
+
+## Releases
+
+Releases are done automatically in CI by analyzing commit messages.
+Make sure to follow the [Conventional Commits Convention](https://www.conventionalcommits.org/en/v1.0.0-beta.2/).

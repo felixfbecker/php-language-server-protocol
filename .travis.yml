@@ -1,9 +1,17 @@
----
 language: php
 
 php:
   - '7.0'
   - '7.2'
+
+env:
+  global:
+    - FORCE_COLOR=1
+
+cache:
+  directories:
+    - ~/.composer/cache
+    - ~/.npm
 
 install:
   - composer install --prefer-dist --no-interaction
@@ -11,3 +19,21 @@ install:
 script:
   - vendor/bin/phpcs -n
   - composer phpstan
+
+jobs:
+  include:
+    - stage: test
+    - stage: release
+      language: node_js
+      node_js: '10'
+      script:
+        - ./node_modules/.bin/semantic-release
+
+stages:
+  - test
+  - name: release
+    if: branch = master AND type = push AND fork = false
+
+branches:
+  except:
+   - /^v\d+\.\d+\.\d+$/
