@@ -13,4 +13,9 @@ class CodeLensOptions
      * @var bool|null
      */
     public $resolveProvider;
+
+    public function __construct(bool $resolveProvider = null)
+    {
+        $this->resolveProvider = $resolveProvider;
+    }
 }

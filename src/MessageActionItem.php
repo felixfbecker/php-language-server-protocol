@@ -10,4 +10,9 @@ class MessageActionItem
      * @var string
      */
     public $title;
+
+    public function __construct(string $title = null)
+    {
+        $this->title = $title;
+    }
 }

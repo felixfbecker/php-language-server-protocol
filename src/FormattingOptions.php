@@ -22,4 +22,10 @@ class FormattingOptions
     public $insertSpaces;
 
     // Can be extended with further properties.
+
+    public function __construct(int $tabSize = null, bool $insertSpaces = null)
+    {
+        $this->tabSize = $tabSize;
+        $this->insertSpaces = $insertSpaces;
+    }
 }

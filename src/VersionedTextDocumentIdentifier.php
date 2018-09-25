@@ -10,4 +10,10 @@ class VersionedTextDocumentIdentifier extends TextDocumentIdentifier
      * @var int
      */
     public $version;
+
+    public function __construct(string $uri = null, int $version = null)
+    {
+        parent::__construct($uri);
+        $this->version = $version;
+    }
 }

@@ -35,4 +35,12 @@ class TextDocumentItem
      * @var string
      */
     public $text;
+
+    public function __construct(string $uri = null, string $languageId = null, int $version = null, string $text = null)
+    {
+        $this->uri = $uri;
+        $this->languageId = $languageId;
+        $this->version = $version;
+        $this->text = $text;
+    }
 }
