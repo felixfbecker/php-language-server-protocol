@@ -5,7 +5,7 @@
 [![php](https://img.shields.io/badge/php-%3E%3D%207.0-8892BF.svg)](https://php.net/)
 [![license](https://img.shields.io/packagist/l/felixfbecker/language-server-protocol.svg)](https://github.com/felixfbecker/php-language-server-protocol/blob/master/LICENSE)
 
-Protocol classes for the [Language Server Protocol](https://microsoft.github.io/language-server-protocol-protocol/) in PHP
+Protocol classes for the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) in PHP
 
 ## Installation
 
