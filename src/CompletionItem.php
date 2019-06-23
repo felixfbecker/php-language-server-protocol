@@ -97,6 +97,15 @@ class CompletionItem
     public $data;
 
     /**
+     * The format of the insert text. The format applies to both the `insertText` property
+     * and the `newText` property of a provided `textEdit`.
+     *
+     * @var int|null
+     * @see InsertTextFormat
+     */
+    public $insertTextFormat;
+
+    /**
      * @param string          $label
      * @param int|null        $kind
      * @param string|null     $detail
@@ -108,6 +117,7 @@ class CompletionItem
      * @param TextEdit[]|null $additionalTextEdits
      * @param Command|null    $command
      * @param mixed|null      $data
+     * @param int|null        $insertTextFormat
      */
     public function __construct(
         string $label = null,
@@ -120,7 +130,8 @@ class CompletionItem
         TextEdit $textEdit = null,
         array $additionalTextEdits = null,
         Command $command = null,
-        $data = null
+        $data = null,
+        int $insertTextFormat = null
     ) {
         $this->label = $label;
         $this->kind = $kind;
@@ -133,5 +144,6 @@ class CompletionItem
         $this->additionalTextEdits = $additionalTextEdits;
         $this->command = $command;
         $this->data = $data;
+        $this->insertTextFormat = $insertTextFormat;
     }
 }
