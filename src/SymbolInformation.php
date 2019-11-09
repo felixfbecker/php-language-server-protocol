@@ -6,7 +6,7 @@ namespace LanguageServerProtocol;
  * Represents information about programming constructs like variables, classes,
  * interfaces etc.
  */
-class SymbolInformation
+class SymbolInformation implements \JsonSerializable
 {
     /**
      * The name of this symbol.
@@ -48,5 +48,23 @@ class SymbolInformation
         $this->kind = $kind;
         $this->location = $location;
         $this->containerName = $containerName;
+    }
+
+    /**
+     * Only serialize properties with valid values.
+     *
+     * @return object
+     */
+    public function jsonSerialize()
+    {
+        $fields = new \stdClass;
+
+        foreach (get_object_vars($this) as $name => $value) {
+            if ($value !== null) {
+                $fields->$name = $value;
+            }
+        }
+
+        return $fields;
     }
 }

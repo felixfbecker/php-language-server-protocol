@@ -5,7 +5,7 @@ namespace LanguageServerProtocol;
 /**
  * Contains additional information about the context in which a completion request is triggered.
  */
-class CompletionContext
+class CompletionContext implements \JsonSerializable
 {
     /**
      * How the completion was triggered.
@@ -26,5 +26,23 @@ class CompletionContext
     {
         $this->triggerKind = $triggerKind;
         $this->triggerCharacter = $triggerCharacter;
+    }
+
+    /**
+     * Only serialize properties with valid values.
+     *
+     * @return object
+     */
+    public function jsonSerialize()
+    {
+        $fields = new \stdClass;
+
+        foreach (get_object_vars($this) as $name => $value) {
+            if ($value !== null) {
+                $fields->$name = $value;
+            }
+        }
+
+        return $fields;
     }
 }

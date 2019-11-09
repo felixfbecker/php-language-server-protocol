@@ -5,7 +5,7 @@ namespace LanguageServerProtocol;
 /**
  * The result of a hover request.
  */
-class Hover
+class Hover implements \JsonSerializable
 {
     /**
      * The hover's content
@@ -29,5 +29,23 @@ class Hover
     {
         $this->contents = $contents;
         $this->range = $range;
+    }
+
+    /**
+     * Only serialize properties with valid values.
+     *
+     * @return object
+     */
+    public function jsonSerialize()
+    {
+        $fields = new \stdClass;
+
+        foreach (get_object_vars($this) as $name => $value) {
+            if ($value !== null) {
+                $fields->$name = $value;
+            }
+        }
+
+        return $fields;
     }
 }

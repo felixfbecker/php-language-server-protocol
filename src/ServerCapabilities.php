@@ -2,7 +2,7 @@
 
 namespace LanguageServerProtocol;
 
-class ServerCapabilities
+class ServerCapabilities implements \JsonSerializable
 {
     /**
      * Defines how text documents are synced.
@@ -129,4 +129,22 @@ class ServerCapabilities
      * @var bool|null
      */
     public $dependenciesProvider;
+
+    /**
+     * Only serialize properties with valid values.
+     *
+     * @return object
+     */
+    public function jsonSerialize()
+    {
+        $fields = new \stdClass;
+
+        foreach (get_object_vars($this) as $name => $value) {
+            if ($value !== null) {
+                $fields->$name = $value;
+            }
+        }
+
+        return $fields;
+    }
 }

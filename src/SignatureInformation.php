@@ -7,7 +7,7 @@ namespace LanguageServerProtocol;
  * can have a label, like a function-name, a doc-comment, and
  * a set of parameters.
  */
-class SignatureInformation
+class SignatureInformation implements \JsonSerializable
 {
     /**
      * The label of this signature. Will be shown in
@@ -45,5 +45,23 @@ class SignatureInformation
         $this->label = $label;
         $this->parameters = $parameters;
         $this->documentation = $documentation;
+    }
+
+    /**
+     * Only serialize properties with valid values.
+     *
+     * @return object
+     */
+    public function jsonSerialize()
+    {
+        $fields = new \stdClass;
+
+        foreach (get_object_vars($this) as $name => $value) {
+            if ($value !== null) {
+                $fields->$name = $value;
+            }
+        }
+
+        return $fields;
     }
 }

@@ -2,7 +2,7 @@
 
 namespace LanguageServerProtocol;
 
-class ClientCapabilities
+class ClientCapabilities implements \JsonSerializable
 {
     /**
      * The client supports workspace/xfiles requests
@@ -30,5 +30,23 @@ class ClientCapabilities
         $this->xfilesProvider = $xfilesProvider;
         $this->xcontentProvider = $xcontentProvider;
         $this->xcacheProvider = $xcacheProvider;
+    }
+
+    /**
+     * Only serialize properties with valid values.
+     *
+     * @return object
+     */
+    public function jsonSerialize()
+    {
+        $fields = new \stdClass;
+
+        foreach (get_object_vars($this) as $name => $value) {
+            if ($value !== null) {
+                $fields->$name = $value;
+            }
+        }
+
+        return $fields;
     }
 }

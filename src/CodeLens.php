@@ -9,7 +9,7 @@ namespace LanguageServerProtocol;
  * A code lens is _unresolved_ when no command is associated to it. For performance
  * reasons the creation of a code lens and resolving should be done in two stages.
  */
-class CodeLens
+class CodeLens implements \JsonSerializable
 {
     /**
      * The range in which this code lens is valid. Should only span a single line.
@@ -38,5 +38,23 @@ class CodeLens
         $this->range = $range;
         $this->command = $command;
         $this->data = $data;
+    }
+
+    /**
+     * Only serialize properties with valid values.
+     *
+     * @return object
+     */
+    public function jsonSerialize()
+    {
+        $fields = new \stdClass;
+
+        foreach (get_object_vars($this) as $name => $value) {
+            if ($value !== null) {
+                $fields->$name = $value;
+            }
+        }
+
+        return $fields;
     }
 }

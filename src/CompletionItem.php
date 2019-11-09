@@ -3,7 +3,7 @@ declare(strict_types = 1);
 
 namespace LanguageServerProtocol;
 
-class CompletionItem
+class CompletionItem implements \JsonSerializable
 {
     /**
      * The label of this completion item. By default
@@ -145,5 +145,23 @@ class CompletionItem
         $this->command = $command;
         $this->data = $data;
         $this->insertTextFormat = $insertTextFormat;
+    }
+
+    /**
+     * Only serialize properties with valid values.
+     *
+     * @return object
+     */
+    public function jsonSerialize()
+    {
+        $fields = new \stdClass;
+
+        foreach (get_object_vars($this) as $name => $value) {
+            if ($value !== null) {
+                $fields->$name = $value;
+            }
+        }
+
+        return $fields;
     }
 }

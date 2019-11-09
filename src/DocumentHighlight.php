@@ -7,7 +7,7 @@ namespace LanguageServerProtocol;
  * special attention. Usually a document highlight is visualized by changing
  * the background color of its range.
  */
-class DocumentHighlight
+class DocumentHighlight implements \JsonSerializable
 {
     /**
      * The range this highlight applies to.
@@ -27,5 +27,23 @@ class DocumentHighlight
     {
         $this->range = $range;
         $this->kind = $kind;
+    }
+
+    /**
+     * Only serialize properties with valid values.
+     *
+     * @return object
+     */
+    public function jsonSerialize()
+    {
+        $fields = new \stdClass;
+
+        foreach (get_object_vars($this) as $name => $value) {
+            if ($value !== null) {
+                $fields->$name = $value;
+            }
+        }
+
+        return $fields;
     }
 }

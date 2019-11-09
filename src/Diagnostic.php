@@ -6,7 +6,7 @@ namespace LanguageServerProtocol;
  * Represents a diagnostic, such as a compiler error or warning. Diagnostic objects are only valid in the scope of a
  * resource.
  */
-class Diagnostic
+class Diagnostic implements \JsonSerializable
 {
     /**
      * The range at which the message applies.
@@ -59,5 +59,23 @@ class Diagnostic
         $this->code = $code;
         $this->severity = $severity;
         $this->source = $source;
+    }
+
+    /**
+     * Only serialize properties with valid values.
+     *
+     * @return object
+     */
+    public function jsonSerialize()
+    {
+        $fields = new \stdClass;
+
+        foreach (get_object_vars($this) as $name => $value) {
+            if ($value !== null) {
+                $fields->$name = $value;
+            }
+        }
+
+        return $fields;
     }
 }

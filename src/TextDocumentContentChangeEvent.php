@@ -6,7 +6,7 @@ namespace LanguageServerProtocol;
  * An event describing a change to a text document. If range and rangeLength are omitted
  * the new text is considered to be the full content of the document.
  */
-class TextDocumentContentChangeEvent
+class TextDocumentContentChangeEvent implements \JsonSerializable
 {
     /**
      * The range of the document that changed.
@@ -34,5 +34,23 @@ class TextDocumentContentChangeEvent
         $this->range = $range;
         $this->rangeLength = $rangeLength;
         $this->text = $text;
+    }
+
+    /**
+     * Only serialize properties with valid values.
+     *
+     * @return object
+     */
+    public function jsonSerialize()
+    {
+        $fields = new \stdClass;
+
+        foreach (get_object_vars($this) as $name => $value) {
+            if ($value !== null) {
+                $fields->$name = $value;
+            }
+        }
+
+        return $fields;
     }
 }

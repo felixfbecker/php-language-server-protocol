@@ -5,7 +5,7 @@ namespace LanguageServerProtocol;
 /**
  * Completion options.
  */
-class CompletionOptions
+class CompletionOptions implements \JsonSerializable
 {
     /**
      * The server provides support to resolve additional information for a completion
@@ -26,5 +26,23 @@ class CompletionOptions
     {
         $this->resolveProvider = $resolveProvider;
         $this->triggerCharacters = $triggerCharacters;
+    }
+
+    /**
+     * Only serialize properties with valid values.
+     *
+     * @return object
+     */
+    public function jsonSerialize()
+    {
+        $fields = new \stdClass;
+
+        foreach (get_object_vars($this) as $name => $value) {
+            if ($value !== null) {
+                $fields->$name = $value;
+            }
+        }
+
+        return $fields;
     }
 }

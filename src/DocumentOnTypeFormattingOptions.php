@@ -5,7 +5,7 @@ namespace LanguageServerProtocol;
 /**
  * Format document on type options
  */
-class DocumentOnTypeFormattingOptions
+class DocumentOnTypeFormattingOptions implements \JsonSerializable
 {
     /**
      * A character on which formatting should be triggered, like `}`.
@@ -25,5 +25,23 @@ class DocumentOnTypeFormattingOptions
     {
         $this->firstTriggerCharacter = $firstTriggerCharacter;
         $this->moreTriggerCharacter = $moreTriggerCharacter;
+    }
+
+    /**
+     * Only serialize properties with valid values.
+     *
+     * @return object
+     */
+    public function jsonSerialize()
+    {
+        $fields = new \stdClass;
+
+        foreach (get_object_vars($this) as $name => $value) {
+            if ($value !== null) {
+                $fields->$name = $value;
+            }
+        }
+
+        return $fields;
     }
 }
