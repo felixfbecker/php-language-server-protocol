@@ -40,6 +40,24 @@ class ServerCapabilities
     public $definitionProvider;
 
     /**
+     * The server provides goto type definition support.
+     *
+     * @since 3.6.0
+     *
+     * @var bool|null
+     */
+    public $typeDefinitionProvider;
+
+    /**
+     * The server provides goto implementation support.
+     *
+     * @since 3.6.0
+     *
+     * @var bool|null
+     */
+    public $implementationProvider;
+
+    /**
      * The server provides find references support.
      *
      * @var bool|null
