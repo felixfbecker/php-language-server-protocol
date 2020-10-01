@@ -11,14 +11,14 @@ class Command
     /**
      * Title of the command, like `save`.
      *
-     * @var string
+     * @var string|null
      */
     public $title;
 
     /**
      * The identifier of the actual command handler.
      *
-     * @var string
+     * @var string|null
      */
     public $command;
 
@@ -30,6 +30,11 @@ class Command
      */
     public $arguments;
 
+    /**
+     * @param string|null $title
+     * @param string|null $command
+     * @param mixed[]|null $arguments
+     */
     public function __construct(string $title = null, string $command = null, array $arguments = null)
     {
         $this->title = $title;

@@ -21,6 +21,10 @@ class DocumentOnTypeFormattingOptions
      */
     public $moreTriggerCharacter;
 
+    /**
+     * @param string|null $firstTriggerCharacter
+     * @param string[]|null $moreTriggerCharacter
+     */
     public function __construct(string $firstTriggerCharacter = null, array $moreTriggerCharacter = null)
     {
         $this->firstTriggerCharacter = $firstTriggerCharacter;
