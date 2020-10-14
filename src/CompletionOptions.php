@@ -23,7 +23,6 @@ class CompletionOptions
     public $triggerCharacters;
 
     /**
-     * @param bool|null $resolveProvider
      * @param string[]|null $triggerCharacters
      */
     public function __construct(bool $resolveProvider = null, array $triggerCharacters = null)

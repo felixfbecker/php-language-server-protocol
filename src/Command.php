@@ -31,8 +31,6 @@ class Command
     public $arguments;
 
     /**
-     * @param string|null $title
-     * @param string|null $command
      * @param mixed[]|null $arguments
      */
     public function __construct(string $title = null, string $command = null, array $arguments = null)

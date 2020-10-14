@@ -34,8 +34,6 @@ class CodeLens
     public $data;
 
     /**
-     * @param Range|null $range
-     * @param Command|null $command
      * @param mixed $data
      */
     public function __construct(Range $range = null, Command $command = null, $data = null)
