@@ -52,8 +52,6 @@ abstract class CompletionItemKind
                 return self::MODULE;
             case SymbolKind::FILE:
                 return self::FILE;
-            case SymbolKind::STRING:
-                return self::TEXT;
             case SymbolKind::NUMBER:
             case SymbolKind::BOOLEAN:
             case SymbolKind::ARRAY:
@@ -65,6 +63,9 @@ abstract class CompletionItemKind
             case SymbolKind::VARIABLE:
             case SymbolKind::CONSTANT:
                 return self::VARIABLE;
+            case SymbolKind::STRING:
+            default:
+                return self::TEXT;
         }
     }
 }

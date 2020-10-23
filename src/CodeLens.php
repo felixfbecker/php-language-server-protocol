@@ -33,6 +33,9 @@ class CodeLens
      */
     public $data;
 
+    /**
+     * @param mixed $data
+     */
     public function __construct(Range $range = null, Command $command = null, $data = null)
     {
         $this->range = $range;
