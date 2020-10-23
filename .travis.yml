@@ -21,6 +21,7 @@ install:
 script:
   - vendor/bin/phpcs -n
   - composer phpstan
+  - composer phpstan
 
 jobs:
   include:

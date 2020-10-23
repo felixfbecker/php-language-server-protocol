@@ -15,21 +15,28 @@
         }
     ],
     "require": {
-        "php": ">=7.0"
+        "php": ">=7.1"
     },
     "require-dev": {
         "phpstan/phpstan": "*",
-        "squizlabs/php_codesniffer": "^3.1"
+        "squizlabs/php_codesniffer": "^3.1",
+        "vimeo/psalm": "^4.0"
     },
     "autoload": {
         "psr-4": {
             "LanguageServerProtocol\\": "src/"
         }
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts":
     {
-        "phpstan": "./vendor/bin/phpstan analyse -c phpstan.neon --ansi --level=7 -vvv src"
+        "phpstan": "./vendor/bin/phpstan analyse -c phpstan.neon --ansi --level=7 -vvv src",
+        "psalm": "./vendor/bin/psalm"
     }
 }
