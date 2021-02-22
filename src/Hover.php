@@ -22,7 +22,7 @@ class Hover
     public $range;
 
     /**
-     * @param string|MarkedString|string[]|MarkedString[] $contents The hover's content
+     * @param string|MarkedString|string[]|MarkedString[]|MarkupContent $contents The hover's content
      * @param Range $range An optional range
      */
     public function __construct($contents = null, $range = null)
