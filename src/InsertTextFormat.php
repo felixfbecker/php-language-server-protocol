@@ -6,7 +6,7 @@ namespace LanguageServerProtocol;
  * Defines whether the insert text in a completion item should be interpreted as
  * plain text or a snippet.
  */
-class InsertTextFormat
+abstract class InsertTextFormat
 {
     /**
      * The primary text to be inserted is treated as a plain string.

@@ -26,7 +26,7 @@ class ParameterInformation
      * The human-readable doc-comment of this signature. Will be shown
      * in the UI but can be omitted.
      *
-     * @var string|null
+     * @var MarkupContent|string|null
      */
     public $documentation;
 
@@ -34,10 +34,10 @@ class ParameterInformation
      * Create ParameterInformation
      *
      * @param string|int[] $label   The label of this parameter information.
-     * @param string $documentation The human-readable doc-comment of this signature. Will be shown in the UI but can
+     * @param MarkupContent|string|null $documentation The human-readable doc-comment of this signature. Will be shown in the UI but can
      *                              be omitted.
      */
-    public function __construct($label, string $documentation = null)
+    public function __construct($label, $documentation = null)
     {
         $this->label = $label;
         $this->documentation = $documentation;
