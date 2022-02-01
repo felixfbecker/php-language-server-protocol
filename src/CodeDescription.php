@@ -10,9 +10,14 @@ namespace LanguageServerProtocol;
 class CodeDescription
 {
  /**
-	 * An URI to open with more information about the diagnostic error.
-	 *
-	 * @var string
-	 */
-	public $href;
+     * An URI to open with more information about the diagnostic error.
+     *
+     * @var string
+     */
+    public $href;
+
+    public function __construct(string $href)
+    {
+        $this->href = $href;
+    }
 }
