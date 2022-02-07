@@ -20,6 +20,7 @@ class PackageDescriptor
      */
     public function __construct(string $name = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->name = $name;
     }
 }

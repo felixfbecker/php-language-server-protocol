@@ -31,7 +31,9 @@ class ReferenceInformation
      */
     public function __construct(Location $reference = null, SymbolDescriptor $symbol = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->reference = $reference;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->symbol = $symbol;
     }
 }

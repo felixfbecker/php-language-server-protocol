@@ -231,6 +231,7 @@ class CompletionItem
         $data = null,
         int $insertTextFormat = null
     ) {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->label = $label;
         $this->kind = $kind;
         $this->detail = $detail;

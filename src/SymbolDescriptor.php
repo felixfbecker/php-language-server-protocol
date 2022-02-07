@@ -29,6 +29,7 @@ class SymbolDescriptor
      */
     public function __construct(string $fqsen = null, PackageDescriptor $package = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->fqsen = $fqsen;
         $this->package = $package;
     }

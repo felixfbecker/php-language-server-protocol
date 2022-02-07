@@ -19,7 +19,9 @@ class Location
 
     public function __construct(string $uri = null, Range $range = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->uri = $uri;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->range = $range;
     }
 }

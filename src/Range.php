@@ -23,7 +23,9 @@ class Range
 
     public function __construct(Position $start = null, Position $end = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->start = $start;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->end = $end;
     }
 

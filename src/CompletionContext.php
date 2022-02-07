@@ -24,6 +24,7 @@ class CompletionContext
 
     public function __construct(int $triggerKind = null, string $triggerCharacter = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->triggerKind = $triggerKind;
         $this->triggerCharacter = $triggerCharacter;
     }

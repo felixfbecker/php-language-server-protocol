@@ -25,6 +25,7 @@ class DocumentHighlight
 
     public function __construct(Range $range = null, int $kind = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->range = $range;
         $this->kind = $kind;
     }
