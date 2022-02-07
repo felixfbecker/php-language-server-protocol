@@ -25,10 +25,18 @@ class ClientCapabilities
      */
     public $xcacheProvider;
 
-    public function __construct(bool $xfilesProvider = null, bool $xcontentProvider = null, bool $xcacheProvider = null)
+    /**
+     * Window specific client capabilities.
+     * 
+     * @var WindowClientCapabilities|null
+     */
+    public $window;
+
+    public function __construct(bool $xfilesProvider = null, bool $xcontentProvider = null, bool $xcacheProvider = null, WindowClientCapabilities $window = null)
     {
         $this->xfilesProvider = $xfilesProvider;
         $this->xcontentProvider = $xcontentProvider;
         $this->xcacheProvider = $xcacheProvider;
+        $this->window = $window;
     }
 }
