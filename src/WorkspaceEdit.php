@@ -2,10 +2,12 @@
 
 namespace LanguageServerProtocol;
 
+use JsonSerializable;
+
 /**
  * A workspace edit represents changes to many resources managed in the workspace.
  */
-class WorkspaceEdit
+class WorkspaceEdit implements JsonSerializable
 {
     /**
      * Holds changes to existing resources. Associative Array from URI to TextEdit
@@ -60,5 +62,17 @@ class WorkspaceEdit
         $this->changes = $changes;
         $this->documentChanges = $documentChanges;
         $this->changeAnnotations = $changeAnnotations;
+    }
+
+    /**
+     * This is needed because VSCode Does not like nulls
+     * meaning if a null is sent then this will not compute
+     *
+     * @return mixed
+     */
+    #[\ReturnTypeWillChange]
+    public function jsonSerialize()
+    {
+        return array_filter(get_object_vars($this));
     }
 }
