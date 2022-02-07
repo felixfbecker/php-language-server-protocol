@@ -27,7 +27,7 @@ class ClientCapabilities
 
     /**
      * Window specific client capabilities.
-     * 
+     *
      * @var WindowClientCapabilities|null
      */
     public $window;

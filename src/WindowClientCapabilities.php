@@ -5,8 +5,8 @@ namespace LanguageServerProtocol;
 class WindowClientCapabilities
 {
     /**
-	 * Whether client supports server initiated progress using the
-	 * `window/workDoneProgress/create` request.
+     * Whether client supports server initiated progress using the
+     * `window/workDoneProgress/create` request.
      *
      * @var bool|null
      */
