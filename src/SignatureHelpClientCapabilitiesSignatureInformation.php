@@ -2,7 +2,6 @@
 
 namespace LanguageServerProtocol;
 
-
 class SignatureHelpClientCapabilitiesSignatureInformation
 {
 
@@ -43,7 +42,7 @@ class SignatureHelpClientCapabilitiesSignatureInformation
         array $documentationFormat = null,
         SignatureHelpClientCapabilitiesSignatureInformationParameterInformation $parameterInformation = null,
         bool $activeParameterSupport = null
-        ) {
+    ) {
         $this->documentationFormat = $documentationFormat;
         $this->parameterInformation = $parameterInformation;
         $this->activeParameterSupport = $activeParameterSupport;

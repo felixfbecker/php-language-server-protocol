@@ -19,11 +19,13 @@ class WorkspaceFolder
      */
     public $name;
 
-    PUblic function __construct(
-        string $uri,
-        string $name
+    public function __construct(
+        string $uri = null,
+        string $name = null
     ) {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->uri = $uri;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->name = $name;
     }
 }

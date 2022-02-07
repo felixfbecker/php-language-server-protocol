@@ -37,7 +37,9 @@
     "prefer-stable": true,
     "scripts":
     {
-        "phpstan": "./vendor/bin/phpstan analyse -c phpstan.neon --ansi --level=7 -vvv src",
-        "psalm": "./vendor/bin/psalm"
+        "phpstan": "phpstan analyse -c phpstan.neon --ansi --level=7 -vvv src",
+        "psalm": "psalm",
+        "phpcs": "phpcs",
+        "phpcbf": "phpcbf"
     }
 }

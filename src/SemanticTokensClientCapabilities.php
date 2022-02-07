@@ -95,10 +95,10 @@ class SemanticTokensClientCapabilities
     /**
      * Undocumented function
      *
-     * @param SemanticTokensClientCapabilitiesRequests $requests
-     * @param string[] $tokenTypes
-     * @param string[] $tokenModifiers
-     * @param string[] $formats
+     * @param SemanticTokensClientCapabilitiesRequests|null $requests
+     * @param string[]|null $tokenTypes
+     * @param string[]|null $tokenModifiers
+     * @param string[]|null $formats
      * @param boolean|null $dynamicRegistration
      * @param boolean|null $overlappingTokenSupport
      * @param boolean|null $multilineTokenSupport
@@ -106,19 +106,23 @@ class SemanticTokensClientCapabilities
      * @param boolean|null $augmentsSyntaxTokens
      */
     public function __construct(
-        SemanticTokensClientCapabilitiesRequests $requests,
-        array $tokenTypes,
-        array $tokenModifiers,
-        array $formats,
+        SemanticTokensClientCapabilitiesRequests $requests = null,
+        array $tokenTypes = null,
+        array $tokenModifiers = null,
+        array $formats = null,
         bool $dynamicRegistration = null,
         bool $overlappingTokenSupport = null,
         bool $multilineTokenSupport = null,
         bool $serverCancelSupport = null,
         bool $augmentsSyntaxTokens = null
     ) {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->requests = $requests;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->tokenTypes = $tokenTypes;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->tokenModifiers = $tokenModifiers;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->formats = $formats;
         $this->dynamicRegistration = $dynamicRegistration;
         $this->overlappingTokenSupport = $overlappingTokenSupport;
@@ -126,5 +130,4 @@ class SemanticTokensClientCapabilities
         $this->serverCancelSupport = $serverCancelSupport;
         $this->augmentsSyntaxTokens = $augmentsSyntaxTokens;
     }
-
 }

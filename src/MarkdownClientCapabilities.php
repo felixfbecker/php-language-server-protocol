@@ -30,15 +30,16 @@ class MarkdownClientCapabilities
     public $allowedTags;
 
     /**
-     * @param string $parser
+     * @param string|null $parser
      * @param string|null $version
      * @param string[]|null $allowedTags
      */
     public function __construct(
-        string $parser,
+        string $parser = null,
         string $version = null,
         array $allowedTags = null
-    ){
+    ) {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->parser = $parser;
         $this->version = $version;
         $this->allowedTags = $allowedTags;

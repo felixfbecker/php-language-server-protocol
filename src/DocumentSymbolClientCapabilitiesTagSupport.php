@@ -22,10 +22,11 @@ class DocumentSymbolClientCapabilitiesTagSupport
     /**
      * Undocumented function
      *
-     * @param int[] $valueSet
+     * @param int[]|null $valueSet
      */
-    public function __construct(array $valueSet)
+    public function __construct(array $valueSet = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->valueSet = $valueSet;
     }
 }

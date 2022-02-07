@@ -29,5 +29,4 @@ class ImplementationClientCapabilities
         $this->dynamicRegistration = $dynamicRegistration;
         $this->linkSupport = $linkSupport;
     }
-
 }

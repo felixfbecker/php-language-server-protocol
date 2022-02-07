@@ -59,7 +59,7 @@ class RenameClientCapabilities
         bool $prepareSupport = null,
         int $prepareSupportDefaultBehavior = null,
         bool $honorsChangeAnnotations = null
-    ){
+    ) {
         $this->dynamicRegistration = $dynamicRegistration;
         $this->prepareSupport = $prepareSupport;
         $this->prepareSupportDefaultBehavior = $prepareSupportDefaultBehavior;

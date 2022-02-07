@@ -262,6 +262,4 @@ class TextDocumentClientCapabilities
         $this->semanticTokens = $semanticTokens;
         $this->moniker = $moniker;
     }
-
-
 }

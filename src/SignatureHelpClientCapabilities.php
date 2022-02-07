@@ -2,7 +2,6 @@
 
 namespace LanguageServerProtocol;
 
-
 class SignatureHelpClientCapabilities
 {
     /**

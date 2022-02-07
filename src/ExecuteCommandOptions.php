@@ -17,7 +17,7 @@ class ExecuteCommandOptions
      */
     public function __construct(
         array $commands
-    ){
+    ) {
         $this->commands = $commands;
     }
 }

@@ -34,8 +34,8 @@ class ParameterInformation
      * Create ParameterInformation
      *
      * @param string|int[] $label   The label of this parameter information.
-     * @param MarkupContent|string|null $documentation The human-readable doc-comment of this signature. Will be shown in the UI but can
-     *                              be omitted.
+     * @param MarkupContent|string|null $documentation The human-readable doc-comment of this signature.
+     *                                  Will be shown in the UI but can be omitted.
      */
     public function __construct($label, $documentation = null)
     {

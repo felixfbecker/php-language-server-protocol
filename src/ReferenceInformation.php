@@ -26,7 +26,8 @@ class ReferenceInformation
 
     /**
      * @param Location         $reference The location in the workspace where the `symbol` is referenced.
-     * @param SymbolDescriptor $symbol    Metadata about the symbol that can be used to identify or locate its definition.
+     * @param SymbolDescriptor $symbol    Metadata about the symbol that
+     *                                    can be used to identify or locate its definition.
      */
     public function __construct(Location $reference = null, SymbolDescriptor $symbol = null)
     {

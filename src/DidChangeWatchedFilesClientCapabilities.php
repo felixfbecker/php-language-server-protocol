@@ -15,7 +15,7 @@ class DidChangeWatchedFilesClientCapabilities
 
     public function __construct(
         bool $dynamicRegistration = null
-    ){
+    ) {
         $this->dynamicRegistration = $dynamicRegistration;
     }
 }

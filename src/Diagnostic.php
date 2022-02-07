@@ -84,19 +84,20 @@ class Diagnostic
     public $data;
 
     /**
-     * @param  string $message  The diagnostic's message
-     * @param  Range  $range    The range at which the message applies
-     * @param  int    $code     The diagnostic's code
-     * @param  int    $severity DiagnosticSeverity
-     * @param  string $source   A human-readable string describing the source of this diagnostic
-     * @param  CodeDescription $codeDescription
+     * @param  string|null $message  The diagnostic's message
+     * @param  Range|null  $range    The range at which the message applies
+     * @param  int|null    $code     The diagnostic's code
+     * @param  int|null    $severity DiagnosticSeverity
+     * @param  string|null $source   A human-readable string describing the source of this diagnostic
+     * @param  CodeDescription|null $codeDescription
      * @param  int[]|null  $tags     Additional metadata about the diagnostic
      * @param  DiagnosticRelatedInformation[]|null  $relatedInformation Related diagnostic information
-     * @param  mixed  $data     A data entry field that is preserved between a `textDocument/publishDiagnostics` notification and `textDocument/codeAction` request
+     * @param  mixed  $data     A data entry field that is preserved between a `textDocument/publishDiagnostics`
+     *                          notification and `textDocument/codeAction` request
      */
     public function __construct(
-        string $message,
-        Range $range,
+        string $message = null,
+        Range $range = null,
         int $code = null,
         int $severity = null,
         string $source = null,
@@ -105,7 +106,9 @@ class Diagnostic
         array $relatedInformation = null,
         $data = null
     ) {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->message = $message;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->range = $range;
         $this->code = $code;
         $this->severity = $severity;

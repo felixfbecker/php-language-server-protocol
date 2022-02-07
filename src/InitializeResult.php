@@ -12,19 +12,17 @@ class InitializeResult
     public $capabilities;
 
     /**
-	 * Information about the server.
-	 *
-	 * @since 3.15.0
+     * Information about the server.
+     *
+     * @since 3.15.0
      *
      * @var InitializeResultServerInfo|null
-	 */
-	public $serverInfo;
-
-    /**
-     * @param ServerCapabilities $capabilities
      */
-    public function __construct(ServerCapabilities $capabilities, InitializeResultServerInfo $serverInfo = null)
+    public $serverInfo;
+
+    public function __construct(ServerCapabilities $capabilities = null, InitializeResultServerInfo $serverInfo = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->capabilities = $capabilities;
         $this->serverInfo = $serverInfo;
     }

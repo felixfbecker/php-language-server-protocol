@@ -40,7 +40,7 @@ class TextDocumentSyncClientCapabilities
         bool $willSave = null,
         bool $willSaveWaitUntil = null,
         bool $didSave = null
-    ){
+    ) {
         $this->dynamicRegistration = $dynamicRegistration;
         $this->willSave = $willSave;
         $this->willSaveWaitUntil = $willSaveWaitUntil;

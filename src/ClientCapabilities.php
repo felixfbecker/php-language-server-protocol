@@ -36,11 +36,11 @@ class ClientCapabilities
     public $general;
 
     /**
-	 * Experimental client capabilities.
+     * Experimental client capabilities.
      *
      * @var mixed|null
-	 */
-	public $experimental;
+     */
+    public $experimental;
 
     /**
      * Undocumented function

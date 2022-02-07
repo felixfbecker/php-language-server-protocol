@@ -10,22 +10,22 @@ namespace LanguageServerProtocol;
 class CompletionItemLabelDetails
 {
     /**
-	 * An optional string which is rendered less prominently directly after
-	 * {@link CompletionItem.label label}, without any spacing. Should be
-	 * used for function signatures or type annotations.
-	 *
-	 * @var string|null
-	 */
-	public $detail;
+     * An optional string which is rendered less prominently directly after
+     * {@link CompletionItem.label label}, without any spacing. Should be
+     * used for function signatures or type annotations.
+     *
+     * @var string|null
+     */
+    public $detail;
 
-	/**
-	 * An optional string which is rendered less prominently after
-	 * {@link CompletionItemLabelDetails.detail}. Should be used for fully qualified
-	 * names or file path.
-	 *
-	 * @var string|null
-	 */
-	public $description;
+    /**
+     * An optional string which is rendered less prominently after
+     * {@link CompletionItemLabelDetails.detail}. Should be used for fully qualified
+     * names or file path.
+     *
+     * @var string|null
+     */
+    public $description;
 
     public function __construct(string $detail = null, string $description = null)
     {

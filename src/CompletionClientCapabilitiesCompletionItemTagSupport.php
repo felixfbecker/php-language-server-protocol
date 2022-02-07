@@ -13,11 +13,12 @@ class CompletionClientCapabilitiesCompletionItemTagSupport
     public $valueSet;
 
     /**
-     * @param int[] $valueSet CompletionItemTag
+     * @param int[]|null $valueSet CompletionItemTag
      */
     public function __construct(
-        array $valueSet
+        array $valueSet = null
     ) {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->valueSet = $valueSet;
     }
 }

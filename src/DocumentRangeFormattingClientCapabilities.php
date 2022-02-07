@@ -14,7 +14,7 @@ class DocumentRangeFormattingClientCapabilities
 
     public function __construct(
         bool $dynamicRegistration = null
-    ){
+    ) {
         $this->dynamicRegistration = $dynamicRegistration;
     }
 }

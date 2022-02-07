@@ -9,11 +9,11 @@ namespace LanguageServerProtocol;
 class CompletionList
 {
     /**
-	 * This list is not complete. Further typing should result in recomputing
-	 * this list.
-	 *
-	 * Recomputed lists have all their items replaced (not appended) in the
-	 * incomplete completion sessions.
+     * This list is not complete. Further typing should result in recomputing
+     * this list.
+     *
+     * Recomputed lists have all their items replaced (not appended) in the
+     * incomplete completion sessions.
      *
      * @var bool
      */
@@ -28,7 +28,8 @@ class CompletionList
 
     /**
      * @param CompletionItem[] $items        The completion items.
-     * @param bool             $isIncomplete This list it not complete. Further typing should result in recomputing this list.
+     * @param bool             $isIncomplete This list it not complete.
+     *                                       Further typing should result in recomputing this list.
      */
     public function __construct(array $items = [], bool $isIncomplete = false)
     {

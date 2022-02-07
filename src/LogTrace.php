@@ -2,7 +2,6 @@
 
 namespace LanguageServerProtocol;
 
-
 /**
  * A notification to log the trace of the server’s execution.
  * The amount and content of these notifications depends on the
