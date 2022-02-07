@@ -60,6 +60,6 @@ class Position
     {
         $lines = explode("\n", $content);
         $slice = array_slice($lines, 0, $this->line);
-        return (int) array_sum(array_map('strlen', $slice)) + count($slice) + $this->character;
+        return array_sum(array_map('strlen', $slice)) + count($slice) + $this->character;
     }
 }

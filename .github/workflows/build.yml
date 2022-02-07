@@ -38,6 +38,8 @@ jobs:
         run: ./vendor/bin/phpcs -n
       - name: phpstan
         run: ./vendor/bin/phpstan
+      - name: psalm
+        run: ./vendor/bin/psalm
 #      - name: phan
 #        run: ./vendor/bin/phan
 #      - name: phpunit

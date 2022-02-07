@@ -13,9 +13,9 @@ class PublishDiagnosticsClientCapabilitiesTagSupport
     public $valueSet;
 
     /**
-     * @param int[]|null $valueSet
+     * @param int[] $valueSet
      */
-    public function __construct(array $valueSet = null)
+    public function __construct(array $valueSet)
     {
         $this->valueSet = $valueSet;
     }

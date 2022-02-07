@@ -18,4 +18,12 @@ class WorkspaceFolder
      * @var string
      */
     public $name;
+
+    PUblic function __construct(
+        string $uri,
+        string $name
+    ) {
+        $this->uri = $uri;
+        $this->name = $name;
+    }
 }

@@ -23,7 +23,7 @@ class InitializeResult
     /**
      * @param ServerCapabilities $capabilities
      */
-    public function __construct(ServerCapabilities $capabilities = null, InitializeResultServerInfo $serverInfo = null)
+    public function __construct(ServerCapabilities $capabilities, InitializeResultServerInfo $serverInfo = null)
     {
         $this->capabilities = $capabilities;
         $this->serverInfo = $serverInfo;

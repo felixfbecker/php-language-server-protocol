@@ -16,7 +16,7 @@ class CompletionClientCapabilitiesCompletionItemInsertTextModeSupport
      * @param int[] $valueSet InsertTextMode
      */
     public function __construct(
-        array $valueSet = null
+        array $valueSet
     ) {
         $this->valueSet = $valueSet;
     }

@@ -30,12 +30,12 @@ class MarkdownClientCapabilities
     public $allowedTags;
 
     /**
-     * @param string|null $parser
+     * @param string $parser
      * @param string|null $version
      * @param string[]|null $allowedTags
      */
     public function __construct(
-        string $parser = null,
+        string $parser,
         string $version = null,
         array $allowedTags = null
     ){

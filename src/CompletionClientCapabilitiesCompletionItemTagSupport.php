@@ -16,7 +16,7 @@ class CompletionClientCapabilitiesCompletionItemTagSupport
      * @param int[] $valueSet CompletionItemTag
      */
     public function __construct(
-        array $valueSet = null
+        array $valueSet
     ) {
         $this->valueSet = $valueSet;
     }

@@ -20,7 +20,7 @@ class RegularExpressionsClientCapabilities
 	public $version;
 
 
-    public function __construct(string $engine = null, string $version = null)
+    public function __construct(string $engine, string $version = null)
 	{
 		$this->engine = $engine;
 		$this->version = $version;

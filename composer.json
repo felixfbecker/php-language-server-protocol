@@ -29,7 +29,8 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "1.x-dev"
+            "dev-main": "1.x-dev",
+            "dev-feature/spec-3.16-zobo": "1.x-dev"
         }
     },
     "minimum-stability": "dev",

@@ -49,11 +49,13 @@ class WorkspaceEdit
 
     /**
      * @param array<string, TextEdit[]> $changes
+     * @param mixed $documentChanges
+     * @param array<string, ChangeAnnotation>|null $changeAnnotations
      */
     public function __construct(
         array $changes = [],
         $documentChanges = null,
-        array $changeAnnotations = []
+        array $changeAnnotations = null
     ) {
         $this->changes = $changes;
         $this->documentChanges = $documentChanges;

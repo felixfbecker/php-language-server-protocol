@@ -22,9 +22,9 @@ class DocumentSymbolClientCapabilitiesTagSupport
     /**
      * Undocumented function
      *
-     * @param SymbolTag[]|null $valueSet
+     * @param int[] $valueSet
      */
-    public function __construct(array $valueSet = null)
+    public function __construct(array $valueSet)
     {
         $this->valueSet = $valueSet;
     }

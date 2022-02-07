@@ -99,6 +99,18 @@ class CodeAction implements JsonSerializable
 	 */
 	public $data;
 
+	/**
+	 * Undocumented function
+	 *
+	 * @param string $title
+	 * @param string|null $kind
+	 * @param Diagnostic[]|null $diagnostics
+	 * @param boolean|null $isPreferred
+	 * @param CodeActionDisabled|null $disabled
+	 * @param WorkspaceEdit|null $edit
+	 * @param Command|null $command
+	 * @param mixed $data
+	 */
 	public function __construct(
 		string $title,
 		string $kind = null,

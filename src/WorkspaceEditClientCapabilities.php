@@ -55,6 +55,15 @@ class WorkspaceEditClientCapabilities
      */
     public $changeAnnotationSupport;
 
+    /**
+     * Undocumented function
+     *
+     * @param boolean|null $documentChanges
+     * @param string[]|null $resourceOperations
+     * @param string|null $failureHandling
+     * @param boolean|null $normalizesLineEndings
+     * @param WorkspaceEditClientCapabilitiesChangeAnnotationSupport|null $changeAnnotationSupport
+     */
     public function __construct(
         bool $documentChanges = null,
         array $resourceOperations = null,

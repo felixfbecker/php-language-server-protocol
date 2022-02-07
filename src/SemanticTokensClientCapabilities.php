@@ -95,32 +95,32 @@ class SemanticTokensClientCapabilities
     /**
      * Undocumented function
      *
+     * @param SemanticTokensClientCapabilitiesRequests $requests
+     * @param string[] $tokenTypes
+     * @param string[] $tokenModifiers
+     * @param string[] $formats
      * @param boolean|null $dynamicRegistration
-     * @param SemanticTokensClientCapabilitiesRequests|null $requests
-     * @param string[]|null $tokenTypes
-     * @param string[]|null $tokenModifiers
-     * @param string[]|null $formats
      * @param boolean|null $overlappingTokenSupport
      * @param boolean|null $multilineTokenSupport
      * @param boolean|null $serverCancelSupport
      * @param boolean|null $augmentsSyntaxTokens
      */
     public function __construct(
+        SemanticTokensClientCapabilitiesRequests $requests,
+        array $tokenTypes,
+        array $tokenModifiers,
+        array $formats,
         bool $dynamicRegistration = null,
-        SemanticTokensClientCapabilitiesRequests $requests = null,
-        array $tokenTypes = null,
-        array $tokenModifiers = null,
-        array $formats = null,
         bool $overlappingTokenSupport = null,
         bool $multilineTokenSupport = null,
         bool $serverCancelSupport = null,
         bool $augmentsSyntaxTokens = null
     ) {
-        $this->dynamicRegistration = $dynamicRegistration;
         $this->requests = $requests;
         $this->tokenTypes = $tokenTypes;
         $this->tokenModifiers = $tokenModifiers;
         $this->formats = $formats;
+        $this->dynamicRegistration = $dynamicRegistration;
         $this->overlappingTokenSupport = $overlappingTokenSupport;
         $this->multilineTokenSupport = $multilineTokenSupport;
         $this->serverCancelSupport = $serverCancelSupport;

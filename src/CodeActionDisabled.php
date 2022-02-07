@@ -9,6 +9,8 @@ class CodeActionDisabled
      * disabled.
      *
      * This is displayed in the code actions UI.
+     *
+     * @var string
      */
     public $reason;
 

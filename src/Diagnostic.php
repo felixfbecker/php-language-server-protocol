@@ -26,7 +26,7 @@ class Diagnostic
     /**
      * The diagnostic's code. which might appear in the user interface
      *
-     * @var mixed|null
+     * @var int|null
      */
     public $code;
 
@@ -68,8 +68,7 @@ class Diagnostic
      * An array of related diagnostic information, e.g. when symbol-names within
      * a scope collide all definitions can be marked via this property.
      *
-     * @var array[]|null
-     * @see DiagnosticRelatedInformation
+     * @var DiagnosticRelatedInformation[]|null
      */
     public $relatedInformation;
 
@@ -91,12 +90,12 @@ class Diagnostic
      * @param  int    $severity DiagnosticSeverity
      * @param  string $source   A human-readable string describing the source of this diagnostic
      * @param  CodeDescription $codeDescription
-     * @param  array  $tags     Additional metadata about the diagnostic
-     * @param  array  $relatedInformation Related diagnostic information
+     * @param  int[]|null  $tags     Additional metadata about the diagnostic
+     * @param  DiagnosticRelatedInformation[]|null  $relatedInformation Related diagnostic information
      * @param  mixed  $data     A data entry field that is preserved between a `textDocument/publishDiagnostics` notification and `textDocument/codeAction` request
      */
     public function __construct(
-        string $message = null,
+        string $message,
         Range $range,
         int $code = null,
         int $severity = null,
@@ -111,5 +110,9 @@ class Diagnostic
         $this->code = $code;
         $this->severity = $severity;
         $this->source = $source;
+        $this->codeDescription = $codeDescription;
+        $this->tags = $tags;
+        $this->relatedInformation = $relatedInformation;
+        $this->data = $data;
     }
 }

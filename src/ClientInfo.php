@@ -17,4 +17,12 @@ class ClientInfo
      * @var string|null
      */
     public $version;
+
+    public function __construct(
+        string $name,
+        string $version = null
+    ) {
+        $this->name = $name;
+        $this->version = $version;
+    }
 }
