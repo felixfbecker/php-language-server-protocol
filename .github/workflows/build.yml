@@ -33,11 +33,13 @@ jobs:
           extensions: ${{ matrix.xdebug }}, ast
           tools: composer
       - name: Composer Install
-        run: composer install --prefer-dist --no-interaction
+        run: COMPOSER_ROOT_VERSION=dev-main composer install --prefer-dist --no-interaction
       - name: phpcs
         run: ./vendor/bin/phpcs -n
       - name: phpstan
         run: ./vendor/bin/phpstan
+      - name: psalm
+        run: ./vendor/bin/psalm
 #      - name: phan
 #        run: ./vendor/bin/phan
 #      - name: phpunit

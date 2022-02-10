@@ -33,6 +33,7 @@ class TextDocumentContentChangeEvent
     {
         $this->range = $range;
         $this->rangeLength = $rangeLength;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->text = $text;
     }
 }

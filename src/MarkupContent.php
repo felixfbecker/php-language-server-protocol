@@ -44,7 +44,9 @@ class MarkupContent
      */
     public function __construct(string $kind = null, string $value = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->kind = $kind;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->value = $value;
     }
 }

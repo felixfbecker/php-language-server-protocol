@@ -44,8 +44,11 @@ class SymbolInformation
      */
     public function __construct($name = null, $kind = null, $location = null, $containerName = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->name = $name;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->kind = $kind;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->location = $location;
         $this->containerName = $containerName;
     }

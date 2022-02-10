@@ -29,14 +29,17 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-main": "1.x-dev"
+            "dev-main": "1.x-dev",
+            "dev-feature/spec-3.16-zobo": "1.x-dev"
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts":
     {
-        "phpstan": "./vendor/bin/phpstan analyse -c phpstan.neon --ansi --level=7 -vvv src",
-        "psalm": "./vendor/bin/psalm"
+        "phpstan": "phpstan analyse -c phpstan.neon --ansi --level=7 -vvv src",
+        "psalm": "psalm",
+        "phpcs": "phpcs",
+        "phpcbf": "phpcbf"
     }
 }

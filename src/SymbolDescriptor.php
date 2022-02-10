@@ -23,11 +23,13 @@ class SymbolDescriptor
     public $package;
 
     /**
-     * @param string $fqsen              The fully qualified structural element name, a globally unique identifier for the symbol.
+     * @param string $fqsen              The fully qualified structural element name, a globally
+     *                                   unique identifier for the symbol.
      * @param PackageDescriptor $package Identifies the Composer package the symbol is defined in
      */
     public function __construct(string $fqsen = null, PackageDescriptor $package = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->fqsen = $fqsen;
         $this->package = $package;
     }

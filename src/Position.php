@@ -23,7 +23,9 @@ class Position
 
     public function __construct(int $line = null, int $character = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->line = $line;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->character = $character;
     }
 
@@ -60,6 +62,6 @@ class Position
     {
         $lines = explode("\n", $content);
         $slice = array_slice($lines, 0, $this->line);
-        return (int) array_sum(array_map('strlen', $slice)) + count($slice) + $this->character;
+        return array_sum(array_map('strlen', $slice)) + count($slice) + $this->character;
     }
 }

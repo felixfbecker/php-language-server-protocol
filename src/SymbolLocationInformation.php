@@ -26,6 +26,7 @@ class SymbolLocationInformation
      */
     public function __construct(SymbolDescriptor $symbol = null, Location $location = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->symbol = $symbol;
         $this->location = $location;
     }
