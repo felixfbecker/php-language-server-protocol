@@ -7,7 +7,7 @@ env:
 
 jobs:
   test:
-    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
+    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/master'
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -33,7 +33,7 @@ jobs:
           extensions: ${{ matrix.xdebug }}, ast
           tools: composer
       - name: Composer Install
-        run: COMPOSER_ROOT_VERSION=dev-main composer install --prefer-dist --no-interaction
+        run: COMPOSER_ROOT_VERSION=dev-master composer install --prefer-dist --no-interaction
       - name: phpcs
         run: ./vendor/bin/phpcs -n
       - name: phpstan
