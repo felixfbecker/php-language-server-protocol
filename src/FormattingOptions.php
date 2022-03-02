@@ -25,7 +25,9 @@ class FormattingOptions
 
     public function __construct(int $tabSize = null, bool $insertSpaces = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->tabSize = $tabSize;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->insertSpaces = $insertSpaces;
     }
 }

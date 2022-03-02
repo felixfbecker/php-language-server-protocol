@@ -38,9 +38,13 @@ class TextDocumentItem
 
     public function __construct(string $uri = null, string $languageId = null, int $version = null, string $text = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->uri = $uri;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->languageId = $languageId;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->version = $version;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->text = $text;
     }
 }

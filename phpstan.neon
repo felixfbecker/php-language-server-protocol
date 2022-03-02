@@ -1,4 +1,7 @@
 parameters:
+    level: 2
+    paths:
+        - src/
     reportUnmatchedIgnoredErrors: false
     ignoreErrors:
         - '#Property .* does not accept#'

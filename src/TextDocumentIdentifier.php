@@ -16,6 +16,7 @@ class TextDocumentIdentifier
      */
     public function __construct(string $uri = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->uri = $uri;
     }
 }

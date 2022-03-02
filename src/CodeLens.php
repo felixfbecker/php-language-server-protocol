@@ -38,6 +38,7 @@ class CodeLens
      */
     public function __construct(Range $range = null, Command $command = null, $data = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->range = $range;
         $this->command = $command;
         $this->data = $data;

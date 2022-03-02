@@ -27,6 +27,7 @@ class Hover
      */
     public function __construct($contents = null, $range = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->contents = $contents;
         $this->range = $range;
     }

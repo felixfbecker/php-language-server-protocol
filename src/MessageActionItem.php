@@ -13,6 +13,7 @@ class MessageActionItem
 
     public function __construct(string $title = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->title = $title;
     }
 }

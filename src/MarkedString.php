@@ -16,7 +16,9 @@ class MarkedString
 
     public function __construct(string $language = null, string $value = null)
     {
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->language = $language;
+        /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->value = $value;
     }
 }

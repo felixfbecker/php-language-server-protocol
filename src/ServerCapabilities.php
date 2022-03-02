@@ -128,6 +128,13 @@ class ServerCapabilities
     public $renameProvider;
 
     /**
+     * The server provides execute command support.
+     *
+     * @var ExecuteCommandOptions|null
+     */
+    public $executeCommandProvider;
+
+    /**
      * The server provides workspace references exporting support.
      *
      * @var bool|null

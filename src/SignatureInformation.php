@@ -21,7 +21,7 @@ class SignatureInformation
      * The human-readable doc-comment of this signature. Will be shown
      * in the UI but can be omitted.
      *
-     * @var string|null
+     * @var MarkupContent|string|null
      */
     public $documentation;
 
@@ -33,17 +33,34 @@ class SignatureInformation
     public $parameters;
 
     /**
+     * The index of the active parameter.
+     *
+     * If provided, this is used in place of `SignatureHelp.activeParameter`.
+     *
+     * @since 3.16.0
+     *
+     * @var int|null
+     */
+    public $activeParameter;
+
+    /**
      * Create a SignatureInformation
      *
      * @param string $label                           The label of this signature. Will be shown in the UI.
      * @param ParameterInformation[]|null $parameters The parameters of this signature
-     * @param string|null $documentation              The human-readable doc-comment of this signature. Will be shown in the UI
-     *                                                but can be omitted.
+     * @param MarkupContent|string|null $documentation  The human-readable doc-comment of this signature.
+     *                                                  Will be shown in the UI but can be omitted.
+     * @param int|null $activeParameter The index of the active parameter.
      */
-    public function __construct(string $label, array $parameters = null, string $documentation = null)
-    {
+    public function __construct(
+        string $label,
+        array $parameters = null,
+        $documentation = null,
+        int $activeParameter = null
+    ) {
         $this->label = $label;
         $this->parameters = $parameters;
         $this->documentation = $documentation;
+        $this->activeParameter = $activeParameter;
     }
 }
