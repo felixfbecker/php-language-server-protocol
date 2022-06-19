@@ -42,9 +42,7 @@ class ParameterInformation implements JsonSerializable
     public function __construct($label, $documentation = null)
     {
         $this->label = $label;
-        if ($this->documentation !== null) {
-            $this->documentation = $documentation;
-        }
+        $this->documentation = $documentation;
     }
 
     /**

@@ -38,15 +38,9 @@ class SignatureHelpClientCapabilities implements JsonSerializable
         SignatureHelpClientCapabilitiesSignatureInformation $signatureInformation = null,
         bool $contextSupport = null
     ) {
-        if ($this->dynamicRegistration !== null) {
-            $this->dynamicRegistration = $dynamicRegistration;
-        }
-        if ($this->signatureInformation !== null) {
-            $this->signatureInformation = $signatureInformation;
-        }
-        if ($this->contextSupport !== null) {
-            $this->contextSupport = $contextSupport;
-        }
+        $this->dynamicRegistration = $dynamicRegistration;
+        $this->signatureInformation = $signatureInformation;
+        $this->contextSupport = $contextSupport;
     }
 
     /**
@@ -58,6 +52,8 @@ class SignatureHelpClientCapabilities implements JsonSerializable
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-        return array_filter(get_object_vars($this));
+        return array_filter(get_object_vars($this), function ($v) {
+            return $v !== null;
+        });
     }
 }

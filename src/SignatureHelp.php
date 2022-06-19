@@ -57,12 +57,8 @@ class SignatureHelp implements JsonSerializable
     public function __construct(array $signatures = null, $activeSignature = null, int $activeParameter = null)
     {
         $this->signatures = $signatures;
-        if ($this->activeSignature !== null) {
-            $this->activeSignature = $activeSignature;
-        }
-        if ($this->activeParameter !== null) {
-            $this->activeParameter = $activeParameter;
-        }
+        $this->activeSignature = $activeSignature;
+        $this->activeParameter = $activeParameter;
     }
 
     /**
@@ -74,6 +70,8 @@ class SignatureHelp implements JsonSerializable
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-        return array_filter(get_object_vars($this));
+        return array_filter(get_object_vars($this), function ($v) {
+            return $v !== null;
+        });
     }
 }
