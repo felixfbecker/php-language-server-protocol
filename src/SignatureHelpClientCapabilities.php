@@ -2,7 +2,9 @@
 
 namespace LanguageServerProtocol;
 
-class SignatureHelpClientCapabilities
+use JsonSerializable;
+
+class SignatureHelpClientCapabilities implements JsonSerializable
 {
     /**
      * Whether signature help supports dynamic registration.
@@ -39,5 +41,19 @@ class SignatureHelpClientCapabilities
         $this->dynamicRegistration = $dynamicRegistration;
         $this->signatureInformation = $signatureInformation;
         $this->contextSupport = $contextSupport;
+    }
+
+    /**
+     * This is needed because VSCode Does not like nulls
+     * meaning if a null is sent then this will not compute
+     *
+     * @return mixed
+     */
+    #[\ReturnTypeWillChange]
+    public function jsonSerialize()
+    {
+        return array_filter(get_object_vars($this), function ($v) {
+            return $v !== null;
+        });
     }
 }
