@@ -21,7 +21,9 @@ class SignatureHelpOptions implements JsonSerializable
      */
     public function __construct(array $triggerCharacters = null)
     {
-        if ($this->triggerCharacters !== null) $this->triggerCharacters = $triggerCharacters;
+        if ($this->triggerCharacters !== null) {
+            $this->triggerCharacters = $triggerCharacters;
+        }
     }
 
     /**

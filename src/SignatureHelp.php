@@ -57,8 +57,12 @@ class SignatureHelp implements JsonSerializable
     public function __construct(array $signatures = null, $activeSignature = null, int $activeParameter = null)
     {
         $this->signatures = $signatures;
-        if ($this->activeSignature !== null) $this->activeSignature = $activeSignature;
-        if ($this->activeParameter !== null) $this->activeParameter = $activeParameter;
+        if ($this->activeSignature !== null) {
+            $this->activeSignature = $activeSignature;
+        }
+        if ($this->activeParameter !== null) {
+            $this->activeParameter = $activeParameter;
+        }
     }
 
     /**

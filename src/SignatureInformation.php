@@ -61,9 +61,15 @@ class SignatureInformation implements JsonSerializable
         int $activeParameter = null
     ) {
         $this->label = $label;
-        if ($this->parameters !== null) $this->parameters = $parameters;
-        if ($this->documentation !== null) $this->documentation = $documentation;
-        if ($this->activeParameter !== null) $this->activeParameter = $activeParameter;
+        if ($this->parameters !== null) {
+            $this->parameters = $parameters;
+        }
+        if ($this->documentation !== null) {
+            $this->documentation = $documentation;
+        }
+        if ($this->activeParameter !== null) {
+            $this->activeParameter = $activeParameter;
+        }
     }
 
     /**
