@@ -2,11 +2,13 @@
 
 namespace LanguageServerProtocol;
 
+use JsonSerializable;
+
 /**
  * Represents a parameter of a callable-signature. A parameter can
  * have a label and a doc-comment.
  */
-class ParameterInformation
+class ParameterInformation implements JsonSerializable
 {
     /**
      * The label of this parameter information.
@@ -40,6 +42,18 @@ class ParameterInformation
     public function __construct($label, $documentation = null)
     {
         $this->label = $label;
-        $this->documentation = $documentation;
+        if ($this->documentation !== null) $this->documentation = $documentation;
+    }
+
+    /**
+     * This is needed because VSCode Does not like nulls
+     * meaning if a null is sent then this will not compute
+     *
+     * @return mixed
+     */
+    #[\ReturnTypeWillChange]
+    public function jsonSerialize()
+    {
+        return array_filter(get_object_vars($this));
     }
 }

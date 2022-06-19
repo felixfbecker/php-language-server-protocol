@@ -2,12 +2,14 @@
 
 namespace LanguageServerProtocol;
 
+use JsonSerializable;
+
 /**
  * Signature help represents the signature of something
  * callable. There can be multiple signature but only one
  * active and only one active parameter.
  */
-class SignatureHelp
+class SignatureHelp implements JsonSerializable
 {
     /**
      * One or more signatures. If no signatures are available the signature help
@@ -55,7 +57,19 @@ class SignatureHelp
     public function __construct(array $signatures = null, $activeSignature = null, int $activeParameter = null)
     {
         $this->signatures = $signatures;
-        $this->activeSignature = $activeSignature;
-        $this->activeParameter = $activeParameter;
+        if ($this->activeSignature !== null) $this->activeSignature = $activeSignature;
+        if ($this->activeParameter !== null) $this->activeParameter = $activeParameter;
+    }
+
+    /**
+     * This is needed because VSCode Does not like nulls
+     * meaning if a null is sent then this will not compute
+     *
+     * @return mixed
+     */
+    #[\ReturnTypeWillChange]
+    public function jsonSerialize()
+    {
+        return array_filter(get_object_vars($this));
     }
 }
