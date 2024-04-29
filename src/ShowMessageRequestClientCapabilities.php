@@ -13,7 +13,7 @@ class ShowMessageRequestClientCapabilities
     public $messageActionItem;
 
 
-    public function __construct(ShowMessageRequestClientCapabilitiesMessageActionItem $messageActionItem = null)
+    public function __construct(?\LanguageServerProtocol\ShowMessageRequestClientCapabilitiesMessageActionItem $messageActionItem = null)
     {
         $this->messageActionItem = $messageActionItem;
     }

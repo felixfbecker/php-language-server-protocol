@@ -21,7 +21,7 @@ class Position
      */
     public $character;
 
-    public function __construct(int $line = null, int $character = null)
+    public function __construct(?int $line = null, ?int $character = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->line = $line;

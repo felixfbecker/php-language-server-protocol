@@ -22,8 +22,8 @@ class SemanticTokensClientCapabilitiesRequests
     public $full;
 
     public function __construct(
-        bool $range = null,
-        bool $full = null
+        ?bool $range = null,
+        ?bool $full = null
     ) {
         $this->range = $range;
         $this->full = $full;

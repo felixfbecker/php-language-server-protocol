@@ -24,8 +24,8 @@ class ClientCapabilitiesGeneral
 
 
     public function __construct(
-        RegularExpressionsClientCapabilities $regularExpressions = null,
-        MarkdownClientCapabilities $markdown = null
+        ?\LanguageServerProtocol\RegularExpressionsClientCapabilities $regularExpressions = null,
+        ?\LanguageServerProtocol\MarkdownClientCapabilities $markdown = null
     ) {
         $this->regularExpressions = $regularExpressions;
         $this->markdown = $markdown;

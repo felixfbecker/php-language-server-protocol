@@ -50,11 +50,11 @@ class CompletionClientCapabilities
     public $completionList;
 
     public function __construct(
-        bool $dynamicRegistration = null,
-        CompletionClientCapabilitiesCompletionItem $completionItem = null,
-        bool $contextSupport = null,
-        int $insertTextMode = null,
-        CompletionClientCapabilitiesCompletionList $completionList = null
+        ?bool $dynamicRegistration = null,
+        ?\LanguageServerProtocol\CompletionClientCapabilitiesCompletionItem $completionItem = null,
+        ?bool $contextSupport = null,
+        ?int $insertTextMode = null,
+        ?\LanguageServerProtocol\CompletionClientCapabilitiesCompletionList $completionList = null
     ) {
         $this->dynamicRegistration = $dynamicRegistration;
         $this->completionItem = $completionItem;

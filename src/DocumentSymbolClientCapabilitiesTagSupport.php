@@ -24,7 +24,7 @@ class DocumentSymbolClientCapabilitiesTagSupport
      *
      * @param int[]|null $valueSet
      */
-    public function __construct(array $valueSet = null)
+    public function __construct(?array $valueSet = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->valueSet = $valueSet;

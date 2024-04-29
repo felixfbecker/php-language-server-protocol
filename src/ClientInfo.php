@@ -19,8 +19,8 @@ class ClientInfo
     public $version;
 
     public function __construct(
-        string $name = null,
-        string $version = null
+        ?string $name = null,
+        ?string $version = null
     ) {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->name = $name;

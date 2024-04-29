@@ -56,13 +56,13 @@ class ClientCapabilitiesWorkspaceFileOperations
     public $willDelete;
 
     public function __construct(
-        bool $dynamicRegistration = null,
-        bool $didCreate = null,
-        bool $willCreate = null,
-        bool $didRename = null,
-        bool $willRename = null,
-        bool $didDelete = null,
-        bool $willDelete = null
+        ?bool $dynamicRegistration = null,
+        ?bool $didCreate = null,
+        ?bool $willCreate = null,
+        ?bool $didRename = null,
+        ?bool $willRename = null,
+        ?bool $didDelete = null,
+        ?bool $willDelete = null
     ) {
         $this->dynamicRegistration = $dynamicRegistration;
         $this->didCreate = $didCreate;

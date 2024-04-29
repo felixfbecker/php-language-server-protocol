@@ -39,9 +39,9 @@ class SignatureHelpClientCapabilitiesSignatureInformation
      * @param boolean|null $activeParameterSupport
      */
     public function __construct(
-        array $documentationFormat = null,
-        SignatureHelpClientCapabilitiesSignatureInformationParameterInformation $parameterInformation = null,
-        bool $activeParameterSupport = null
+        ?array $documentationFormat = null,
+        ?\LanguageServerProtocol\SignatureHelpClientCapabilitiesSignatureInformationParameterInformation $parameterInformation = null,
+        ?bool $activeParameterSupport = null
     ) {
         $this->documentationFormat = $documentationFormat;
         $this->parameterInformation = $parameterInformation;

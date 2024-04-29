@@ -17,7 +17,7 @@ class SemanticTokensWorkspaceClientCapabilities
      */
     public $refreshSupport;
 
-    public function __construct(bool $refreshSupport = null)
+    public function __construct(?bool $refreshSupport = null)
     {
         $this->refreshSupport = $refreshSupport;
     }

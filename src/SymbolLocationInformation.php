@@ -24,7 +24,7 @@ class SymbolLocationInformation
      * @param SymbolDescriptor $symbol   The location where the symbol is defined, if any
      * @param Location         $location Metadata about the symbol that can be used to identify or locate its definition
      */
-    public function __construct(SymbolDescriptor $symbol = null, Location $location = null)
+    public function __construct(?\LanguageServerProtocol\SymbolDescriptor $symbol = null, ?\LanguageServerProtocol\Location $location = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->symbol = $symbol;

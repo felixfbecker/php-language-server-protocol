@@ -112,13 +112,13 @@ class CodeAction implements JsonSerializable
      * @param mixed $data
      */
     public function __construct(
-        string $title = null,
-        string $kind = null,
-        array $diagnostics = null,
-        bool $isPreferred = null,
-        CodeActionDisabled $disabled = null,
-        WorkspaceEdit $edit = null,
-        Command $command = null,
+        ?string $title = null,
+        ?string $kind = null,
+        ?array $diagnostics = null,
+        ?bool $isPreferred = null,
+        ?\LanguageServerProtocol\CodeActionDisabled $disabled = null,
+        ?\LanguageServerProtocol\WorkspaceEdit $edit = null,
+        ?\LanguageServerProtocol\Command $command = null,
         $data = null
     ) {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */

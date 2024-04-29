@@ -23,7 +23,7 @@ class CompletionClientCapabilitiesCompletionList
      * @param string[]|null $itemDefaults
      */
     public function __construct(
-        array $itemDefaults = null
+        ?array $itemDefaults = null
     ) {
         $this->itemDefaults = $itemDefaults;
     }

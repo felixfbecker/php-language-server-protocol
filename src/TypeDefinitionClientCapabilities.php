@@ -24,8 +24,8 @@ class TypeDefinitionClientCapabilities
     public $linkSupport;
 
     public function __construct(
-        bool $dynamicRegistration = null,
-        bool $linkSupport = null
+        ?bool $dynamicRegistration = null,
+        ?bool $linkSupport = null
     ) {
         $this->dynamicRegistration = $dynamicRegistration;
         $this->linkSupport = $linkSupport;

@@ -25,7 +25,7 @@ class CompletionOptions
     /**
      * @param string[]|null $triggerCharacters
      */
-    public function __construct(bool $resolveProvider = null, array $triggerCharacters = null)
+    public function __construct(?bool $resolveProvider = null, ?array $triggerCharacters = null)
     {
         $this->resolveProvider = $resolveProvider;
         $this->triggerCharacters = $triggerCharacters;

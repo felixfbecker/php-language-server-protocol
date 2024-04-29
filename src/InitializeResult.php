@@ -20,7 +20,7 @@ class InitializeResult
      */
     public $serverInfo;
 
-    public function __construct(ServerCapabilities $capabilities = null, InitializeResultServerInfo $serverInfo = null)
+    public function __construct(?\LanguageServerProtocol\ServerCapabilities $capabilities = null, ?\LanguageServerProtocol\InitializeResultServerInfo $serverInfo = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->capabilities = $capabilities;

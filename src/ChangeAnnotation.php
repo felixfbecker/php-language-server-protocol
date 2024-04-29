@@ -29,7 +29,7 @@ class ChangeAnnotation
      */
     public $description;
 
-    public function __construct(string $label = null, bool $needsConfirmation = null, string $description = null)
+    public function __construct(?string $label = null, ?bool $needsConfirmation = null, ?string $description = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->label = $label;

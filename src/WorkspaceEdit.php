@@ -57,7 +57,7 @@ class WorkspaceEdit implements JsonSerializable
     public function __construct(
         array $changes = [],
         $documentChanges = null,
-        array $changeAnnotations = null
+        ?array $changeAnnotations = null
     ) {
         $this->changes = $changes;
         $this->documentChanges = $documentChanges;

@@ -29,7 +29,7 @@ class ReferenceInformation
      * @param SymbolDescriptor $symbol    Metadata about the symbol that
      *                                    can be used to identify or locate its definition.
      */
-    public function __construct(Location $reference = null, SymbolDescriptor $symbol = null)
+    public function __construct(?\LanguageServerProtocol\Location $reference = null, ?\LanguageServerProtocol\SymbolDescriptor $symbol = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->reference = $reference;

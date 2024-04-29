@@ -16,7 +16,7 @@ class LinkedEditingRangeClientCapabilities
     public $dynamicRegistration;
 
     public function __construct(
-        bool $dynamicRegistration = null
+        ?bool $dynamicRegistration = null
     ) {
         $this->dynamicRegistration = $dynamicRegistration;
     }

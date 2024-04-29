@@ -34,9 +34,9 @@ class SignatureHelpClientCapabilities implements JsonSerializable
     public $contextSupport;
 
     public function __construct(
-        bool $dynamicRegistration = null,
-        SignatureHelpClientCapabilitiesSignatureInformation $signatureInformation = null,
-        bool $contextSupport = null
+        ?bool $dynamicRegistration = null,
+        ?\LanguageServerProtocol\SignatureHelpClientCapabilitiesSignatureInformation $signatureInformation = null,
+        ?bool $contextSupport = null
     ) {
         $this->dynamicRegistration = $dynamicRegistration;
         $this->signatureInformation = $signatureInformation;

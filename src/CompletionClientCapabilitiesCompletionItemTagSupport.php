@@ -16,7 +16,7 @@ class CompletionClientCapabilitiesCompletionItemTagSupport
      * @param int[]|null $valueSet CompletionItemTag
      */
     public function __construct(
-        array $valueSet = null
+        ?array $valueSet = null
     ) {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->valueSet = $valueSet;

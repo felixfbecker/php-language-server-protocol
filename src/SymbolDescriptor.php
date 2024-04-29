@@ -27,7 +27,7 @@ class SymbolDescriptor
      *                                   unique identifier for the symbol.
      * @param PackageDescriptor $package Identifies the Composer package the symbol is defined in
      */
-    public function __construct(string $fqsen = null, PackageDescriptor $package = null)
+    public function __construct(?string $fqsen = null, ?\LanguageServerProtocol\PackageDescriptor $package = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->fqsen = $fqsen;

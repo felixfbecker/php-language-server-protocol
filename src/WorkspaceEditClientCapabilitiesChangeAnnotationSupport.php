@@ -14,7 +14,7 @@ class WorkspaceEditClientCapabilitiesChangeAnnotationSupport
     public $groupsOnLabel;
 
     public function __construct(
-        bool $groupsOnLabel = null
+        ?bool $groupsOnLabel = null
     ) {
         $this->groupsOnLabel = $groupsOnLabel;
     }

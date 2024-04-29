@@ -36,7 +36,7 @@ class TextDocumentItem
      */
     public $text;
 
-    public function __construct(string $uri = null, string $languageId = null, int $version = null, string $text = null)
+    public function __construct(?string $uri = null, ?string $languageId = null, ?int $version = null, ?string $text = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->uri = $uri;

@@ -18,7 +18,7 @@ class InitializeResultServerInfo
      */
     public $version;
 
-    public function __construct(string $name, string $version = null)
+    public function __construct(string $name, ?string $version = null)
     {
         $this->name = $name;
         $this->version = $version;

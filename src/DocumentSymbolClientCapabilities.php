@@ -49,11 +49,11 @@ class DocumentSymbolClientCapabilities
     public $labelSupport;
 
     public function __construct(
-        bool $dynamicRegistration = null,
-        DocumentSymbolClientCapabilitiesSymbolKind $symbolKind = null,
-        bool $hierarchicalDocumentSymbolSupport = null,
-        DocumentSymbolClientCapabilitiesTagSupport $tagSupport = null,
-        bool $labelSupport = null
+        ?bool $dynamicRegistration = null,
+        ?\LanguageServerProtocol\DocumentSymbolClientCapabilitiesSymbolKind $symbolKind = null,
+        ?bool $hierarchicalDocumentSymbolSupport = null,
+        ?\LanguageServerProtocol\DocumentSymbolClientCapabilitiesTagSupport $tagSupport = null,
+        ?bool $labelSupport = null
     ) {
         $this->dynamicRegistration = $dynamicRegistration;
         $this->symbolKind = $symbolKind;

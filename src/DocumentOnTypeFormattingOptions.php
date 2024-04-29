@@ -24,7 +24,7 @@ class DocumentOnTypeFormattingOptions
     /**
      * @param string[]|null $moreTriggerCharacter
      */
-    public function __construct(string $firstTriggerCharacter = null, array $moreTriggerCharacter = null)
+    public function __construct(?string $firstTriggerCharacter = null, ?array $moreTriggerCharacter = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->firstTriggerCharacter = $firstTriggerCharacter;

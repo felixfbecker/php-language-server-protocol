@@ -65,11 +65,11 @@ class WorkspaceEditClientCapabilities
      * @param WorkspaceEditClientCapabilitiesChangeAnnotationSupport|null $changeAnnotationSupport
      */
     public function __construct(
-        bool $documentChanges = null,
-        array $resourceOperations = null,
-        string $failureHandling = null,
-        bool $normalizesLineEndings = null,
-        WorkspaceEditClientCapabilitiesChangeAnnotationSupport $changeAnnotationSupport = null
+        ?bool $documentChanges = null,
+        ?array $resourceOperations = null,
+        ?string $failureHandling = null,
+        ?bool $normalizesLineEndings = null,
+        ?\LanguageServerProtocol\WorkspaceEditClientCapabilitiesChangeAnnotationSupport $changeAnnotationSupport = null
     ) {
         $this->documentChanges = $documentChanges;
         $this->resourceOperations = $resourceOperations;

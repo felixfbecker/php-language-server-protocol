@@ -106,15 +106,15 @@ class SemanticTokensClientCapabilities
      * @param boolean|null $augmentsSyntaxTokens
      */
     public function __construct(
-        SemanticTokensClientCapabilitiesRequests $requests = null,
-        array $tokenTypes = null,
-        array $tokenModifiers = null,
-        array $formats = null,
-        bool $dynamicRegistration = null,
-        bool $overlappingTokenSupport = null,
-        bool $multilineTokenSupport = null,
-        bool $serverCancelSupport = null,
-        bool $augmentsSyntaxTokens = null
+        ?\LanguageServerProtocol\SemanticTokensClientCapabilitiesRequests $requests = null,
+        ?array $tokenTypes = null,
+        ?array $tokenModifiers = null,
+        ?array $formats = null,
+        ?bool $dynamicRegistration = null,
+        ?bool $overlappingTokenSupport = null,
+        ?bool $multilineTokenSupport = null,
+        ?bool $serverCancelSupport = null,
+        ?bool $augmentsSyntaxTokens = null
     ) {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->requests = $requests;
