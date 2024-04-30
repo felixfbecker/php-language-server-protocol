@@ -15,7 +15,7 @@ class SelectionRangeClientCapabilities
      */
     public $dynamicRegistration;
 
-    public function __construct(bool $dynamicRegistration = null)
+    public function __construct(?bool $dynamicRegistration = null)
     {
         $this->dynamicRegistration = $dynamicRegistration;
     }

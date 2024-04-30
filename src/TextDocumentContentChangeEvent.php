@@ -29,7 +29,7 @@ class TextDocumentContentChangeEvent
      */
     public $text;
 
-    public function __construct(Range $range = null, int $rangeLength = null, string $text = null)
+    public function __construct(?\LanguageServerProtocol\Range $range = null, ?int $rangeLength = null, ?string $text = null)
     {
         $this->range = $range;
         $this->rangeLength = $rangeLength;

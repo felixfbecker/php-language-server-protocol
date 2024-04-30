@@ -23,7 +23,7 @@ class DocumentHighlight
      */
     public $kind;
 
-    public function __construct(Range $range = null, int $kind = null)
+    public function __construct(?\LanguageServerProtocol\Range $range = null, ?int $kind = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->range = $range;

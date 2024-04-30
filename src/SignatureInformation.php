@@ -56,9 +56,9 @@ class SignatureInformation implements JsonSerializable
      */
     public function __construct(
         string $label,
-        array $parameters = null,
+        ?array $parameters = null,
         $documentation = null,
-        int $activeParameter = null
+        ?int $activeParameter = null
     ) {
         $this->label = $label;
         $this->parameters = $parameters;

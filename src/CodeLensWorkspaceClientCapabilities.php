@@ -18,7 +18,7 @@ class CodeLensWorkspaceClientCapabilities
     public $refreshSupport;
 
     public function __construct(
-        bool $refreshSupport = null
+        ?bool $refreshSupport = null
     ) {
         $this->refreshSupport = $refreshSupport;
     }

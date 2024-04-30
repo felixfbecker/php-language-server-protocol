@@ -31,7 +31,7 @@ class LogTrace
      */
     public $verbose;
 
-    public function __construct(string $message, string $verbose = null)
+    public function __construct(string $message, ?string $verbose = null)
     {
         $this->message = $message;
         $this->verbose = $verbose;

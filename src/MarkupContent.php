@@ -42,7 +42,7 @@ class MarkupContent
      * @param string $kind the type of the Markup
      * @param string $value the content itself
      */
-    public function __construct(string $kind = null, string $value = null)
+    public function __construct(?string $kind = null, ?string $value = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->kind = $kind;

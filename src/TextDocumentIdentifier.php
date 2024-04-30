@@ -14,7 +14,7 @@ class TextDocumentIdentifier
     /**
      * @param string $uri The text document's URI.
      */
-    public function __construct(string $uri = null)
+    public function __construct(?string $uri = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->uri = $uri;

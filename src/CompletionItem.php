@@ -218,18 +218,18 @@ class CompletionItem
      * @param int|null        $insertTextFormat
      */
     public function __construct(
-        string $label = null,
-        int $kind = null,
-        string $detail = null,
-        string $documentation = null,
-        string $sortText = null,
-        string $filterText = null,
-        string $insertText = null,
-        TextEdit $textEdit = null,
-        array $additionalTextEdits = null,
-        Command $command = null,
+        ?string $label = null,
+        ?int $kind = null,
+        ?string $detail = null,
+        ?string $documentation = null,
+        ?string $sortText = null,
+        ?string $filterText = null,
+        ?string $insertText = null,
+        ?\LanguageServerProtocol\TextEdit $textEdit = null,
+        ?array $additionalTextEdits = null,
+        ?\LanguageServerProtocol\Command $command = null,
         $data = null,
-        int $insertTextFormat = null
+        ?int $insertTextFormat = null
     ) {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->label = $label;

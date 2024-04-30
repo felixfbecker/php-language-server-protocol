@@ -20,8 +20,8 @@ class WorkspaceFolder
     public $name;
 
     public function __construct(
-        string $uri = null,
-        string $name = null
+        ?string $uri = null,
+        ?string $name = null
     ) {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->uri = $uri;

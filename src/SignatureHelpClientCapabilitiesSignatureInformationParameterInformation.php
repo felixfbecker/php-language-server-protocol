@@ -17,7 +17,7 @@ class SignatureHelpClientCapabilitiesSignatureInformationParameterInformation
      */
     public $labelOffsetSupport;
 
-    public function __construct(bool $labelOffsetSupport = null)
+    public function __construct(?bool $labelOffsetSupport = null)
     {
         $this->labelOffsetSupport = $labelOffsetSupport;
     }

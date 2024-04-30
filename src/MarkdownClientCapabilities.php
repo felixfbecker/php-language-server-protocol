@@ -35,9 +35,9 @@ class MarkdownClientCapabilities
      * @param string[]|null $allowedTags
      */
     public function __construct(
-        string $parser = null,
-        string $version = null,
-        array $allowedTags = null
+        ?string $parser = null,
+        ?string $version = null,
+        ?array $allowedTags = null
     ) {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->parser = $parser;

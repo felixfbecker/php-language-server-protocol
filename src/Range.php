@@ -21,7 +21,7 @@ class Range
      */
     public $end;
 
-    public function __construct(Position $start = null, Position $end = null)
+    public function __construct(?\LanguageServerProtocol\Position $start = null, ?\LanguageServerProtocol\Position $end = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->start = $start;

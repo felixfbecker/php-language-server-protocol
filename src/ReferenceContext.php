@@ -11,7 +11,7 @@ class ReferenceContext
      */
     public $includeDeclaration;
 
-    public function __construct(bool $includeDeclaration = null)
+    public function __construct(?bool $includeDeclaration = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->includeDeclaration = $includeDeclaration;

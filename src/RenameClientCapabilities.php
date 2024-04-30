@@ -55,10 +55,10 @@ class RenameClientCapabilities
      * @param boolean|null $honorsChangeAnnotations
      */
     public function __construct(
-        bool $dynamicRegistration = null,
-        bool $prepareSupport = null,
-        int $prepareSupportDefaultBehavior = null,
-        bool $honorsChangeAnnotations = null
+        ?bool $dynamicRegistration = null,
+        ?bool $prepareSupport = null,
+        ?int $prepareSupportDefaultBehavior = null,
+        ?bool $honorsChangeAnnotations = null
     ) {
         $this->dynamicRegistration = $dynamicRegistration;
         $this->prepareSupport = $prepareSupport;

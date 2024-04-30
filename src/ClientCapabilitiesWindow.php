@@ -36,9 +36,9 @@ class ClientCapabilitiesWindow
 
 
     public function __construct(
-        bool $workDoneProgress = null,
-        ShowMessageRequestClientCapabilities $showMessage = null,
-        ShowDocumentClientCapabilities $showDocument = null
+        ?bool $workDoneProgress = null,
+        ?\LanguageServerProtocol\ShowMessageRequestClientCapabilities $showMessage = null,
+        ?\LanguageServerProtocol\ShowDocumentClientCapabilities $showDocument = null
     ) {
         $this->workDoneProgress = $workDoneProgress;
         $this->showMessage = $showMessage;

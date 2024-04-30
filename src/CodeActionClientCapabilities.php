@@ -76,13 +76,13 @@ class CodeActionClientCapabilities
     public $honorsChangeAnnotations;
 
     public function __construct(
-        bool $dynamicRegistration = null,
-        CodeActionClientCapabilitiesCodeActionLiteralSupport $codeActionLiteralSupport = null,
-        bool $isPreferredSupport = null,
-        bool $disabledSupport = null,
-        bool $dataSupport = null,
-        CodeActionClientCapabilitiesResolveSupport $resolveSupport = null,
-        bool $honorsChangeAnnotations = null
+        ?bool $dynamicRegistration = null,
+        ?\LanguageServerProtocol\CodeActionClientCapabilitiesCodeActionLiteralSupport $codeActionLiteralSupport = null,
+        ?bool $isPreferredSupport = null,
+        ?bool $disabledSupport = null,
+        ?bool $dataSupport = null,
+        ?\LanguageServerProtocol\CodeActionClientCapabilitiesResolveSupport $resolveSupport = null,
+        ?bool $honorsChangeAnnotations = null
     ) {
         $this->dynamicRegistration = $dynamicRegistration;
         $this->codeActionLiteralSupport = $codeActionLiteralSupport;

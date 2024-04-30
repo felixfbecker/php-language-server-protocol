@@ -36,7 +36,7 @@ class CodeLens
     /**
      * @param mixed $data
      */
-    public function __construct(Range $range = null, Command $command = null, $data = null)
+    public function __construct(?\LanguageServerProtocol\Range $range = null, ?\LanguageServerProtocol\Command $command = null, $data = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->range = $range;

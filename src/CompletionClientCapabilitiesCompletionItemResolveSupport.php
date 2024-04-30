@@ -16,7 +16,7 @@ class CompletionClientCapabilitiesCompletionItemResolveSupport
      * @param string[] $properties
      */
     public function __construct(
-        array $properties = null
+        ?array $properties = null
     ) {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->properties = $properties;

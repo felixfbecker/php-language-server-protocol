@@ -27,7 +27,7 @@ class CompletionItemLabelDetails
      */
     public $description;
 
-    public function __construct(string $detail = null, string $description = null)
+    public function __construct(?string $detail = null, ?string $description = null)
     {
         $this->detail = $detail;
         $this->description = $description;

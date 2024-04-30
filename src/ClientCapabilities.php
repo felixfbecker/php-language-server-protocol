@@ -76,14 +76,14 @@ class ClientCapabilities
      * @param bool|null $xcacheProvider
      */
     public function __construct(
-        ClientCapabilitiesWorkspace $workspace = null,
-        TextDocumentClientCapabilities $textDocument = null,
-        ClientCapabilitiesWindow $window = null,
-        ClientCapabilitiesGeneral $general = null,
+        ?\LanguageServerProtocol\ClientCapabilitiesWorkspace $workspace = null,
+        ?\LanguageServerProtocol\TextDocumentClientCapabilities $textDocument = null,
+        ?\LanguageServerProtocol\ClientCapabilitiesWindow $window = null,
+        ?\LanguageServerProtocol\ClientCapabilitiesGeneral $general = null,
         $experimental = null,
-        bool $xfilesProvider = null,
-        bool $xcontentProvider = null,
-        bool $xcacheProvider = null
+        ?bool $xfilesProvider = null,
+        ?bool $xcontentProvider = null,
+        ?bool $xcacheProvider = null
     ) {
         $this->workspace = $workspace;
         $this->textDocument = $textDocument;

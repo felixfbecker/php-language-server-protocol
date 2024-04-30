@@ -36,10 +36,10 @@ class TextDocumentSyncClientCapabilities
     public $didSave;
 
     public function __construct(
-        bool $dynamicRegistration = null,
-        bool $willSave = null,
-        bool $willSaveWaitUntil = null,
-        bool $didSave = null
+        ?bool $dynamicRegistration = null,
+        ?bool $willSave = null,
+        ?bool $willSaveWaitUntil = null,
+        ?bool $didSave = null
     ) {
         $this->dynamicRegistration = $dynamicRegistration;
         $this->willSave = $willSave;

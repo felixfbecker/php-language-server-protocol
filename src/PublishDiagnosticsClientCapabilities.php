@@ -52,11 +52,11 @@ class PublishDiagnosticsClientCapabilities
     public $dataSupport;
 
     public function __construct(
-        bool $relatedInformation = null,
-        PublishDiagnosticsClientCapabilitiesTagSupport $tagSupport = null,
-        bool $versionSupport = null,
-        bool $codeDescriptionSupport = null,
-        bool $dataSupport = null
+        ?bool $relatedInformation = null,
+        ?\LanguageServerProtocol\PublishDiagnosticsClientCapabilitiesTagSupport $tagSupport = null,
+        ?bool $versionSupport = null,
+        ?bool $codeDescriptionSupport = null,
+        ?bool $dataSupport = null
     ) {
         $this->relatedInformation = $relatedInformation;
         $this->tagSupport = $tagSupport;

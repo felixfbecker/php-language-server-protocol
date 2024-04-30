@@ -23,7 +23,7 @@ class FormattingOptions
 
     // Can be extended with further properties.
 
-    public function __construct(int $tabSize = null, bool $insertSpaces = null)
+    public function __construct(?int $tabSize = null, ?bool $insertSpaces = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->tabSize = $tabSize;

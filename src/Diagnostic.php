@@ -96,14 +96,14 @@ class Diagnostic
      *                          notification and `textDocument/codeAction` request
      */
     public function __construct(
-        string $message = null,
-        Range $range = null,
-        int $code = null,
-        int $severity = null,
-        string $source = null,
-        CodeDescription $codeDescription = null,
-        array $tags = null,
-        array $relatedInformation = null,
+        ?string $message = null,
+        ?\LanguageServerProtocol\Range $range = null,
+        ?int $code = null,
+        ?int $severity = null,
+        ?string $source = null,
+        ?\LanguageServerProtocol\CodeDescription $codeDescription = null,
+        ?array $tags = null,
+        ?array $relatedInformation = null,
         $data = null
     ) {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */

@@ -42,10 +42,10 @@ class WorkspaceSymbolClientCapabilities
     public $resolveSupport;
 
     public function __construct(
-        bool $dynamicRegistration = null,
-        WorkspaceSymbolClientCapabilitiesSymbolKind $symbolKind = null,
-        WorkspaceSymbolClientCapabilitiesTagSupport $tagSupport = null,
-        WorkspaceSymbolClientCapabilitiesResolveSupport $resolveSupport = null
+        ?bool $dynamicRegistration = null,
+        ?\LanguageServerProtocol\WorkspaceSymbolClientCapabilitiesSymbolKind $symbolKind = null,
+        ?\LanguageServerProtocol\WorkspaceSymbolClientCapabilitiesTagSupport $tagSupport = null,
+        ?\LanguageServerProtocol\WorkspaceSymbolClientCapabilitiesResolveSupport $resolveSupport = null
     ) {
         $this->dynamicRegistration = $dynamicRegistration;
         $this->symbolKind = $symbolKind;

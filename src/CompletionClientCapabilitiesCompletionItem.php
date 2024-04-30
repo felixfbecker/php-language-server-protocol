@@ -115,16 +115,16 @@ class CompletionClientCapabilitiesCompletionItem
      * @param boolean|null $labelDetailsSupport
      */
     public function __construct(
-        bool $snippetSupport = null,
-        bool $commitCharactersSupport = null,
-        array $documentationFormat = null,
-        bool $deprecatedSupport = null,
-        bool $preselectSupport = null,
-        CompletionClientCapabilitiesCompletionItemTagSupport $tagSupport = null,
-        bool $insertReplaceSupport = null,
-        CompletionClientCapabilitiesCompletionItemResolveSupport $resolveSupport = null,
-        CompletionClientCapabilitiesCompletionItemInsertTextModeSupport $insertTextModeSupport = null,
-        bool $labelDetailsSupport = null
+        ?bool $snippetSupport = null,
+        ?bool $commitCharactersSupport = null,
+        ?array $documentationFormat = null,
+        ?bool $deprecatedSupport = null,
+        ?bool $preselectSupport = null,
+        ?\LanguageServerProtocol\CompletionClientCapabilitiesCompletionItemTagSupport $tagSupport = null,
+        ?bool $insertReplaceSupport = null,
+        ?\LanguageServerProtocol\CompletionClientCapabilitiesCompletionItemResolveSupport $resolveSupport = null,
+        ?\LanguageServerProtocol\CompletionClientCapabilitiesCompletionItemInsertTextModeSupport $insertTextModeSupport = null,
+        ?bool $labelDetailsSupport = null
     ) {
         $this->snippetSupport = $snippetSupport;
         $this->commitCharactersSupport = $commitCharactersSupport;

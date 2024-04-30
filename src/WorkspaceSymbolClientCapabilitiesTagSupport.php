@@ -23,7 +23,7 @@ class WorkspaceSymbolClientCapabilitiesTagSupport
      * @param int[]|null $valueSet
      */
     public function __construct(
-        array $valueSet = null
+        ?array $valueSet = null
     ) {
         $this->valueSet = $valueSet;
     }

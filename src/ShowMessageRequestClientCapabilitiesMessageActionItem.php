@@ -15,7 +15,7 @@ class ShowMessageRequestClientCapabilitiesMessageActionItem
     public $additionalPropertiesSupport;
 
 
-    public function __construct(bool $additionalPropertiesSupport = null)
+    public function __construct(?bool $additionalPropertiesSupport = null)
     {
         $this->additionalPropertiesSupport = $additionalPropertiesSupport;
     }

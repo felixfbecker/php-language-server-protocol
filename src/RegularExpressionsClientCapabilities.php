@@ -24,7 +24,7 @@ class RegularExpressionsClientCapabilities
      * @param string $engine
      * @param string|null $version
      */
-    public function __construct(string $engine = null, string $version = null)
+    public function __construct(?string $engine = null, ?string $version = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->engine = $engine;

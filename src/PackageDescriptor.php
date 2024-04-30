@@ -18,7 +18,7 @@ class PackageDescriptor
     /**
      * @param string $name The package name
      */
-    public function __construct(string $name = null)
+    public function __construct(?string $name = null)
     {
         /** @psalm-suppress PossiblyNullPropertyAssignmentValue */
         $this->name = $name;
