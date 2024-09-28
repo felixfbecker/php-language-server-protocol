@@ -3,7 +3,9 @@ declare(strict_types = 1);
 
 namespace LanguageServerProtocol;
 
-class CompletionItem
+use JsonSerializable;
+
+class CompletionItem implements JsonSerializable
 {
     /**
      * The label of this completion item. By default
@@ -244,5 +246,19 @@ class CompletionItem
         $this->command = $command;
         $this->data = $data;
         $this->insertTextFormat = $insertTextFormat;
+    }
+
+    /**
+     * This is needed because VSCode Does not like nulls
+     * meaning if a null is sent then this will not compute
+     *
+     * @return mixed
+     */
+    #[\ReturnTypeWillChange]
+    public function jsonSerialize()
+    {
+        return array_filter(get_object_vars($this), function ($v) {
+            return $v !== null;
+        });
     }
 }

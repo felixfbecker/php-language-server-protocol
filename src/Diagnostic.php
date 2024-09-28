@@ -2,11 +2,13 @@
 
 namespace LanguageServerProtocol;
 
+use JsonSerializable;
+
 /**
  * Represents a diagnostic, such as a compiler error or warning. Diagnostic objects are only valid in the scope of a
  * resource.
  */
-class Diagnostic
+class Diagnostic implements JsonSerializable
 {
     /**
      * The range at which the message applies.
@@ -117,5 +119,19 @@ class Diagnostic
         $this->tags = $tags;
         $this->relatedInformation = $relatedInformation;
         $this->data = $data;
+    }
+
+    /**
+     * This is needed because VSCode Does not like nulls
+     * meaning if a null is sent then this will not compute
+     *
+     * @return mixed
+     */
+    #[\ReturnTypeWillChange]
+    public function jsonSerialize()
+    {
+        return array_filter(get_object_vars($this), function ($v) {
+            return $v !== null;
+        });
     }
 }
